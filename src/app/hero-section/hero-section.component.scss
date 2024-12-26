@@ -1,0 +1,84 @@
+@import '../../styles.scss';
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 98px);
+    background: linear-gradient(to right top, #1C1C1C, #08463B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-name {
+    width: 755px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    >span {
+        font-family: 'Fira Code';
+        font-weight: 400;
+        font-size: 40px;
+        color: $grey;
+    }
+    >h1 {
+        font-family: 'Karla';
+        font-weight: 700;
+        font-size: 128px;
+        color: $grey;
+        text-align: center;
+        margin: 0;
+}
+.button-wrapper {
+    width: 363px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 0 0;
+    >.check-my-work {
+        width: 174px;
+        height: 48px;
+        border: 1px solid;
+    border-radius: 100px;
+    border-color: white;
+    padding: 0 24px;
+    background-color: transparent;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 18px;
+    color: $grey;
+    cursor: pointer;
+    overflow: hidden;
+    transition: text-indent 1s,  border-color 1s, color 1s;
+    &:hover {
+        text-indent: -250%;
+        border-color: $green;
+        color: $green;
+    }
+    }
+    >.contact-me {
+        width: 145px;
+        height: 48px;
+        border: 1px solid;
+    border-radius: 100px;
+    border-color: white;
+    padding: 0 24px;
+    background-color: transparent;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 18px;
+    color: $grey;
+    cursor: pointer;
+    overflow: hidden;
+    transition: text-indent 1s, border-color 1s, color 1s;
+    &:hover {
+        text-indent: -250%;
+        border-color: $green;
+        color: $green;
+    }
+    }
+}
+}
