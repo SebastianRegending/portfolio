@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     gap: 12px;
+    margin: 0;
     >span {
         font-family: 'Fira Code';
         font-weight: 400;
@@ -37,13 +38,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 0 0 0;
+    margin: 40px 0 180px 0;
     >.check-my-work {
         width: 174px;
         height: 48px;
-        border: 1px solid;
+        border: 1px solid white;
     border-radius: 100px;
-    border-color: white;
     padding: 0 24px;
     background-color: transparent;
     font-family: 'Karla';
@@ -62,9 +62,8 @@
     >.contact-me {
         width: 145px;
         height: 48px;
-        border: 1px solid;
+        border: 1px solid white;
     border-radius: 100px;
-    border-color: white;
     padding: 0 24px;
     background-color: transparent;
     font-family: 'Karla';
@@ -79,6 +78,149 @@
         border-color: $green;
         color: $green;
     }
+    }
+}
+
+.banner {
+    width: 1480px;
+    height: 62px;
+    padding: 12px 32px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $green;
+    background-color: rgb(255 255 255 / 12%);
+    backdrop-filter: blur(5.3px);
+    rotate: (-3deg);
+    z-index: 500;
+    >.scrolling-banner {
+        width: 1420px;
+    height: 38px;
+    gap: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    animation: scrollBanner 20s linear infinite;
+    >.banner-point {
+        width: 10px;
+        height: 8px;
+        border-radius: 100%;
+        border: unset;
+        background-color: $green;
+    }
+    >.banner-text {
+        width:380px;
+        height: 38px;
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 32px;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+}
+
+.scroll-down {
+    width: 30px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    top: 598px;
+    left: 96px;
+    >.scroll-down-button {
+        width: 30px;
+        height: 48px;
+        border: 1px solid $green;
+        border-radius: 32px;
+        color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    >.y-line-left {
+        width: 1px;
+        height: 240px;
+        border: 1px solid $green;
+    }
+}
+
+.contacts {
+    width: 32px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 439px;
+    left: 1250px;
+    gap: 24px;
+    >.email {
+        width: 22px;
+        height: 177px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        >a {
+            color: white;
+        transition: ease-in-out 0.25s;
+        text-decoration: none;
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 18px;
+        writing-mode: vertical-rl;
+        rotate: (180deg);
+        text-wrap: nowrap;
+        &:hover {
+            color: $green;
+        }
+    }
+}
+>.social-media {
+    width: 32px;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    >.social-media-github {
+        width: 26px;
+        height: 26px;
+        transition: ease-in-out 0.25s;
+        &:hover {
+            content: url(../../assets/img/github-white.png);
+        }
+    }
+    >.social-media-linkedin {
+        width: 26px;
+        height: 26px;
+        transition: ease-in-out 0.25s;
+        &:hover {
+            content: url(../../assets/img/linkedin-white.png);
+        }
+    }
+
+}
+>.y-line-right {
+    width: 1px;
+    height: 186px;
+    border: 1px solid $grey;
+}
+}
+
+@keyframes scrollBanner {
+    from {
+        transform: translate3d(100%, 0%, 0px);
+}
+    to {
+        transform: translate3d(-100%, 0%, 0px);
     }
 }
 }
