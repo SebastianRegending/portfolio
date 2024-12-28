@@ -1,0 +1,181 @@
+@import "../../styles.scss";
+
+.skills {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/img/middlesection-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(8, 70, 59, 1.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.technologies-wrapper {
+  width: 520px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 0 96px;
+  > h2 {
+    font-family: "Karla";
+    font-weight: 500;
+    font-size: 24px;
+    color: $green;
+    margin: 0 0 24px 0;
+  }
+
+  .technologies-box {
+    width: 520px;
+    height: 550px;
+    border: 1px solid $green;
+    border-radius: 30px;
+    background-color: #3dcfb61a;
+    padding: 32px;
+    > h3 {
+      font-family: "Fira Code";
+      font-weight: 700;
+      font-size: 64px;
+      color: $green;
+      letter-spacing: -3px;
+      margin: 0 0 20px 0;
+    }
+    > .box-content {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      > .introduction {
+        width: 100%;
+        height: fit-content;
+        font-family: "Karla";
+        font-weight: 400;
+        font-size: 16px;
+        color: white;
+      }
+    }
+  }
+
+  .another-skill {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    > h2 {
+      font-family: "Fira Code";
+      font-weight: 700;
+      font-size: 24px;
+      color: white;
+      margin: 0;
+      > span {
+        font-family: "Fira Code";
+        font-weight: 700;
+        font-size: 24px;
+        color: $green;
+      }
+    }
+    > p {
+      width: 100%;
+      height: fit-content;
+      font-family: "Karla";
+      font-weight: 400;
+      font-size: 16px;
+      color: white;
+      margin: 0;
+    }
+  }
+  .lets-talk {
+    width: 174px;
+    height: 48px;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 0 24px;
+    background-color: transparent;
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 18px;
+    color: $grey;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 20px 0 0 0;
+    transition: text-indent 1s, border-color 1s, color 1s;
+    &:hover {
+      text-indent: -250%;
+      border-color: $green;
+      color: $green;
+    }
+  }
+}
+.skillset {
+  width: 730px;
+  height: 530px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  margin: 48px 0 0 0;
+  > .single-skill {
+    width: 104px;
+    height: 116px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    font-family: "Fira Code";
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    text-overflow: inherit;
+    > img {
+      width: 56px;
+      height: 56px;
+      transition: ease-in-out 0.25s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .single-skill-growthmindset {
+    width: 104px;
+    height: 116px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    font-family: "Fira Code";
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+    text-overflow: inherit;
+    transition: ease-in-out 0.25s;
+    >.tooltip-wrapper {
+        width: 190px;
+    height: 130px;
+    position: absolute;
+    top: 2170px;
+    right: 192px;
+    visibility: hidden;
+    transition: ease-in-out 2.75s;
+    }
+    > img {
+      width: 56px;
+      height: 56px;
+      transition: ease-in-out 0.25s;
+    }
+    &:hover {
+      color: $green;
+      > img {
+          transform: scale(1.1);
+        }
+        >.tooltip-wrapper {
+            visibility: visible;
+        }
+      }
+    }
+  }
