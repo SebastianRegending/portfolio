@@ -4,9 +4,14 @@
     display: none !important;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .projects {
     width: 100%;
   height: 780px;
+  display: flex;
   background-color: #1C1C1C;
 padding: 0 0 0 96px;
 }
@@ -19,7 +24,7 @@ padding: 0 0 0 96px;
 }
 
 .portfolio-headlines-wrapper {
-    width: 620px;
+    width: 880px;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -51,6 +56,7 @@ padding: 0 0 0 96px;
     height: fit-content;
     display: flex;
     flex-direction: column;
+    border-top: 1px solid $green;
 }
 
 .single-project {
@@ -64,7 +70,6 @@ padding: 0 0 0 96px;
     font-weight: 700;
     font-size: 24px;
     color: white;
-    border-top: 1px solid $green;
     border-bottom: 1px solid $green;
     cursor: pointer;
     transition: ease-in-out 0.25s;
@@ -85,6 +90,7 @@ padding: 0 0 0 96px;
         color: white;
         display: flex;
         justify-content: flex-end;
+        gap: 4px;
     }
     .text-wrapper {
         width: 80px;
@@ -99,4 +105,68 @@ padding: 0 0 0 96px;
     }
 }
 
+.separator {
+    color: $green;
+}
+}
+
+.screenshot-box-wrapper {
+    width: 350px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screenshot-box-join {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.slantedlines-small-join {
+    width: 300px;
+    height: 200px;
+    border-radius: 16px;
+    position: relative;
+    top: 220px;
+    right: -25px;
+    z-index: 1;
+}
+
+.project-screenshot-join {
+    width: 300px;
+    height: 200px;
+    border-radius: 16px;
+    z-index: 500;
+}
+
+.screenshot-box-sharkie {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.slantedlines-small-sharkie {
+    width: 300px;
+    height: 200px;
+    border-radius: 16px;
+    position: relative;
+    top: -170px;
+    right: -25px;
+    z-index: 1;
+}
+
+.project-screenshot-sharkie {
+    width: 300px;
+    height: 200px;
+    border-radius: 16px;
+    z-index: 500;
 }

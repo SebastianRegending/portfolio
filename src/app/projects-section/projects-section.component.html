@@ -3,23 +3,30 @@
         <div class="portfolio-headlines-wrapper">
             <h2>Portfolio</h2>
             <h3>vorgestellte Projekte</h3>
-            <span>Entdecken Sie hier eine Auswahl meiner Arbeiten. Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.</span>
+            <span>Entdecken Sie hier eine Auswahl meiner Arbeiten.<br>
+                Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.</span>
             <div class="projects-box">
-                <div class="single-project">
+                <div class="single-project" (mouseover)="showProjectScreenshotJoin()" (mouseout)="hideProjectScreenshotJoin()">
                     <div class="text-wrapper">Join<img class="d-none" src="../../assets/img/arrow_outward.png" alt="arrow_outward">
                     </div>
-                    <span>HTML | CSS | Javascript | Firebase</span>
+                    <span>HTML <div class="separator">|</div> CSS <div class="separator">|</div> Javascript <div class="separator">|</div> Firebase</span>
                 </div>
-                <div class="single-project">
+                <div class="single-project" (mouseover)="showProjectScreenshotSharkie()" (mouseout)="hideProjectScreenshotSharkie()">
                     <div class="text-wrapper">Sharkie<img class="d-none" src="../../assets/img/arrow_outward.png" alt="arrow_outward">
                     </div>                  
-                    <span>HTML | CSS | Javascript | OOP</span>
+                    <span>HTML <div class="separator">|</div> CSS <div class="separator">|</div> Javascript <div class="separator">|</div> OOP</span>
                 </div>
             </div>
         </div>
-
     </div>
-
-
-
+    <div class="screenshot-box-wrapper">
+    <div class="screenshot-box-join" [class.hidden]="hideJoinScreenshot">
+        <img class="slantedlines-small-join" src="../../assets/img/slantedlines_small.png" alt="slantedlines_small">
+        <img class="project-screenshot-join" src="../../assets/img/join.png" alt="join">
+    </div>
+    <div class="screenshot-box-sharkie" [class.hidden]="hideSharkieScreenshot">
+        <img class="project-screenshot-sharkie" src="../../assets/img/sharkie.png" alt="sharkie">
+        <img class="slantedlines-small-sharkie" src="../../assets/img/slantedlines_small.png" alt="slantedlines_small">
+    </div>
+</div>
 </section>
