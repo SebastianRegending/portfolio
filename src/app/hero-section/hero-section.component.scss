@@ -5,16 +5,105 @@
     height: calc(100vh - 98px);
     background: linear-gradient(to right top, #1C1C1C, #08463B);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 96px;
+
+    .scroll-down {
+        width: 30px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        >.scroll-down-button {
+            width: 30px;
+            height: 48px;
+            border: 1px solid $green;
+            border-radius: 32px;
+            color: $green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        >.y-line-left {
+            width: 1px;
+            height: 240px;
+            border: 1px solid $green;
+        }
+    }
+    
+    .contacts {
+        width: 32px;
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        >.email {
+            width: 22px;
+            height: 177px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            >a {
+                color: white;
+            transition: ease-in-out 0.25s;
+            text-decoration: none;
+            font-family: 'Karla';
+            font-weight: 400;
+            font-size: 18px;
+            writing-mode: vertical-rl;
+            rotate: (180deg);
+            text-wrap: nowrap;
+            &:hover {
+                color: $green;
+            }
+        }
 }
+>.social-media {
+    width: 32px;
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    >.social-media-github {
+        width: 26px;
+        height: 26px;
+        transition: ease-in-out 0.25s;
+        &:hover {
+            content: url(../../assets/img/github-white.png);
+        }
+    }
+    >.social-media-linkedin {
+        width: 26px;
+        height: 26px;
+        transition: ease-in-out 0.25s;
+        &:hover {
+            content: url(../../assets/img/linkedin-white.png);
+        }
+    }
+
+}
+>.y-line-right {
+    width: 1px;
+    height: 186px;
+    border: 1px solid $grey;
+}
+        }
+    }
 
 .hero-name {
     width: 755px;
     height: 268px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 12px;
     margin: 0;
@@ -93,6 +182,8 @@
     backdrop-filter: blur(5.3px);
     rotate: (-3deg);
     z-index: 500;
+    position: relative;
+    top: -40px;
     >.scrolling-banner {
         width: 1420px;
     height: 38px;
@@ -120,101 +211,7 @@
     }
 }
 }
-
-.scroll-down {
-    width: 30px;
-    height: 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-    position: absolute;
-    top: 598px;
-    left: 96px;
-    >.scroll-down-button {
-        width: 30px;
-        height: 48px;
-        border: 1px solid $green;
-        border-radius: 32px;
-        color: $green;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-    >.y-line-left {
-        width: 1px;
-        height: 240px;
-        border: 1px solid $green;
-    }
 }
-
-.contacts {
-    width: 32px;
-    height: 480px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 439px;
-    left: 1250px;
-    gap: 24px;
-    >.email {
-        width: 22px;
-        height: 177px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        >a {
-            color: white;
-        transition: ease-in-out 0.25s;
-        text-decoration: none;
-        font-family: 'Karla';
-        font-weight: 400;
-        font-size: 18px;
-        writing-mode: vertical-rl;
-        rotate: (180deg);
-        text-wrap: nowrap;
-        &:hover {
-            color: $green;
-        }
-    }
-}
->.social-media {
-    width: 32px;
-    height: 76px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    >.social-media-github {
-        width: 26px;
-        height: 26px;
-        transition: ease-in-out 0.25s;
-        &:hover {
-            content: url(../../assets/img/github-white.png);
-        }
-    }
-    >.social-media-linkedin {
-        width: 26px;
-        height: 26px;
-        transition: ease-in-out 0.25s;
-        &:hover {
-            content: url(../../assets/img/linkedin-white.png);
-        }
-    }
-
-}
->.y-line-right {
-    width: 1px;
-    height: 186px;
-    border: 1px solid $grey;
-}
-}
-
 @keyframes scrollBanner {
     from {
         transform: translate3d(100%, 0%, 0px);
@@ -222,5 +219,4 @@
     to {
         transform: translate3d(-100%, 0%, 0px);
     }
-}
 }

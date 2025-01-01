@@ -1,102 +1,109 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 .aboutme {
-    width: 100%;
-    height: 100vh;
-    background-color: #1C1C1C;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  padding: 0 96px;
 }
 
 .content {
-    width: 1230px;
-    height: 710px;
+  width: 1230px;
+  height: 710px;
+  display: flex;
+  justify-content: space-between;
+  > img {
+    width: 570px;
+    height: 570px;
+    border-radius: 30px;
+    object-fit: cover;
+  }
+
+  .profile-wrapper {
+    width: 570px;
+    height: 610px;
     display: flex;
+    flex-direction: column;
+    > .profile {
+      width: 570px;
+      height: 570px;
+      border-radius: 30px;
+      object-fit: cover;
+      z-index: 500;
+    }
+  }
+
+  .aboutme-wrapper {
+    width: 570px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
-    >img {
-        width: 570px;
-        height: 570px;
-        border-radius: 30px;
-        object-fit: cover;
+    > h2 {
+      font-family: "Karla";
+      font-weight: 500;
+      font-size: 24px;
+      color: $green;
+      margin: 0 0 24px 0;
     }
-    .aboutme-wrapper {
-        width: 570px;
-        height: 610px;
+  }
+  .slantedlines {
+    position: absolute;
+    top: 1060px;
+    left: 80px;
+    z-index: 1;
+  }
+  .aboutme-box {
+    width: 570px;
+    height: 570px;
+    border: 1px solid $green;
+    border-radius: 30px;
+    background-color: #3dcfb61a;
+    padding: 32px;
+    > h3 {
+      font-family: "Fira Code";
+      font-weight: 700;
+      font-size: 64px;
+      color: $green;
+      letter-spacing: -3px;
+      margin: 0;
+    }
+    > .box-content {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      > .introduction {
+        width: 100%;
+        height: 90px;
+        font-family: "Karla";
+        font-weight: 400;
+        font-size: 16px;
+        color: white;
+      }
+      > p {
+        width: 100%;
+        height: fit-content;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        >h2 {
-            font-family: 'Karla';
-            font-weight: 500;
-            font-size: 24px;
-            color: $green;
-            margin: 0 0 24px 0;
-    }    
-    }
-    .slantedlines {
-        position: absolute;
-        top: 1060px;
-        left: 66px;
-        z-index: 1;
-    }
-    .profile {
-        position: absolute;
-        top: 1030px;
-        left: 96px;
-        z-index: 500;
-    }
-    .aboutme-box {
-        width: 570px;
-        height: 570px;
-        border: 1px solid $green;
-        border-radius: 30px;
-        background-color: #3DCFB61A;
-        padding: 32px;
-        >h3 {
-            font-family: 'Fira Code';
-            font-weight: 700;
-            font-size: 64px;
-            color: $green;
-            letter-spacing: -3px;
-            margin: 0;
+        gap: 24px;
+        font-family: "Karla";
+        font-weight: 400;
+        font-size: 16px;
+        color: #ffffffcc;
+        margin: 0;
+        transition: ease-in-out 0.25s;
+        &:hover {
+          color: white;
         }
-        >.box-content {
-            width: 100%;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-            >.introduction {
-                width: 100%;
-                height: 90px;
-                font-family: 'Karla';
-                font-weight: 400;
-                font-size: 16px;
-                color: white;
-            }
-            >p {
-                width: 100%;
-                height: fit-content;
-                display: flex;
-                gap: 24px;
-                font-family: 'Karla';
-                font-weight: 400;
-                font-size: 16px;
-                color: #FFFFFFCC;
-                margin: 0;
-                transition: ease-in-out 0.25s;
-                &:hover {
-                    color: white;
-                }
-                >img {
-                    width: 26px;
-                    height: 26px;
-                }
-            }
+        > img {
+          width: 26px;
+          height: 26px;
         }
+      }
     }
+  }
 }
