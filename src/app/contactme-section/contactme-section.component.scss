@@ -1,0 +1,192 @@
+@import "../../styles.scss";
+
+.contactme {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c;
+  padding: 0 96px 0;
+}
+
+.content-wrapper {
+  width: 1300px;
+  height: 540px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.lets-work {
+  width: 620px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  > h2 {
+    font-family: "Karla";
+    font-weight: 500;
+    font-size: 24px;
+    color: $green;
+    margin: 0;
+  }
+  > h3 {
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 64px;
+    color: $green;
+    margin: 0;
+  }
+  > h4 {
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 24px;
+    color: $green;
+    margin: 0;
+  }
+  > p {
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    > span {
+      color: $green;
+    }
+  }
+}
+.form-wrapper {
+  width: 620px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 550px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  > .form-element {
+    width: 550px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 1px solid #3dcfb680;
+    padding: 32px;
+    gap: 16px;
+    > label {
+      width: fit-content;
+      height: 30px;
+      font-family: "Fira Code";
+      font-weight: 500;
+      font-size: 24px;
+      color: $green;
+    }
+    > input {
+      width: 470px;
+      height: 22px;
+      font-family: "Karla";
+      font-weight: 400;
+      font-size: 18px;
+      border: none;
+      background-color: #1c1c1c;
+      color: white;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  > .last-form-element {
+    width: 550px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 1px solid #3dcfb680;
+    border-bottom: 1px solid #3dcfb680;
+    padding: 32px;
+    gap: 16px;
+    > label {
+      width: fit-content;
+      height: 30px;
+      font-family: "Fira Code";
+      font-weight: 500;
+      font-size: 24px;
+      color: $green;
+    }
+    > input {
+      width: 470px;
+      height: 22px;
+      font-family: "Karla";
+      font-weight: 400;
+      font-size: 18px;
+      border: none;
+      background-color: #1c1c1c;
+      color: white;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .checkbox-wrapper {
+    width: 550px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 40px 0;
+    > p {
+      font-family: "Karla";
+      font-weight: 400;
+      font-size: 15px;
+      margin: 0;
+      color: white;
+      > span {
+        font-family: "Fira Code";
+        font-weight: 400;
+        font-size: 15px;
+        color: $green;
+      }
+    }
+    > .checkbox {
+      background-color: #1c1c1c;
+      border-color: $green;
+    }
+  }
+
+  .hello-button-wrapper {
+    width: 550px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hello-button {
+    width: 174px;
+    height: 48px;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 0 24px;
+    background-color: transparent;
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 18px;
+    color: $grey;
+    cursor: pointer;
+    overflow: hidden;
+    transition: text-indent 1s, border-color 1s, color 1s;
+    &:hover {
+      text-indent: -250%;
+      border-color: $green;
+      color: $green;
+    }
+  }
+}
