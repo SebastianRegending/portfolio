@@ -78,7 +78,7 @@
     justify-content: center;
     align-items: flex-start;
     border-top: 1px solid #3dcfb680;
-    padding: 32px;
+    padding: 24px;
     gap: 16px;
     > label {
       width: fit-content;
@@ -99,6 +99,9 @@
       color: white;
       &:focus {
         outline: none;
+      }
+      &.placeholder-color-red::placeholder {
+        color: #EC7B7BCC;
       }
     }
   }
@@ -111,7 +114,7 @@
     align-items: flex-start;
     border-top: 1px solid #3dcfb680;
     border-bottom: 1px solid #3dcfb680;
-    padding: 32px;
+    padding: 24px;
     gap: 16px;
     > label {
       width: fit-content;
@@ -121,7 +124,7 @@
       font-size: 24px;
       color: $green;
     }
-    > input {
+    > textarea{
       width: 470px;
       height: 22px;
       font-family: "Karla";
@@ -130,36 +133,120 @@
       border: none;
       background-color: #1c1c1c;
       color: white;
+      resize: none;
+      overflow-y: hidden;
       &:focus {
         outline: none;
       }
-    }
-  }
-  .checkbox-wrapper {
-    width: 550px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 40px 0;
-    > p {
-      font-family: "Karla";
-      font-weight: 400;
-      font-size: 15px;
-      margin: 0;
-      color: white;
-      > span {
-        font-family: "Fira Code";
-        font-weight: 400;
-        font-size: 15px;
-        color: $green;
+      &.placeholder-color-red::placeholder {
+        color: #EC7B7BCC;
       }
     }
-    > .checkbox {
-      background-color: #1c1c1c;
-      border-color: $green;
+  }
+  // .checkbox-wrapper {
+  //   width: 550px;
+  //   height: 30px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: flex-start;
+  //   margin: 40px 0;
+.checkbox-form {
+  width: 550px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px 0;
+  > p {
+    font-family: "Karla";
+    font-weight: 400;
+    font-size: 15px;
+    margin: 0;
+    color: white;
+    > span {
+      font-family: "Fira Code";
+      font-weight: 400;
+      font-size: 15px;
+      color: $green;
     }
   }
+}
+
+  .checkbox-wrapper {
+    width: fit-content;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 8px 0 0;
+      
+  }
+
+  .checkbox-wrapper label {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .checkbox-wrapper input[type=checkbox] {
+    -webkit-appearance: none;
+    appearance: none;
+    vertical-align: middle;
+    background: #1c1c1c;
+    font-size: 14px;
+    border-radius: 2px;
+    display: inline-block;
+    border: 2px solid $green;
+    width: 18px;
+    height: 18px;
+    position: relative;
+  }
+  .checkbox-wrapper input[type=checkbox]:before,
+  .checkbox-wrapper input[type=checkbox]:after {
+    content: "";
+    position: absolute;
+    background: $green;
+    width: calc(2px * 3);
+    height: 2px;
+    top: 50%;
+    left: 12%;
+    transform-origin: left center;
+  }
+  .checkbox-wrapper input[type=checkbox]:before {
+    transform: rotate(45deg) translate(calc(2px / -2), calc(2px / -2)) scaleX(0);
+    transition: transform 200ms ease-in 200ms;
+  }
+  .checkbox-wrapper input[type=checkbox]:after {
+    width: calc(2px * 5);
+    transform: rotate(-45deg) translateY(calc(2px * 2)) scaleX(0);
+    transform-origin: left center;
+    transition: transform 200ms ease-in;
+  }
+  .checkbox-wrapper input[type=checkbox]:checked:before {
+    transform: rotate(45deg) translate(calc(2px / -2), calc(2px / -2)) scaleX(1);
+    transition: transform 200ms ease-in;
+  }
+  .checkbox-wrapper input[type=checkbox]:checked:after {
+    width: calc(2px * 5);
+    transform: rotate(-45deg) translateY(calc(2px * 2)) scaleX(1);
+    transition: transform 200ms ease-out 200ms;
+  }
+  .checkbox-wrapper input[type=checkbox]:focus {
+    outline: calc(2px / 2) dotted rgba(0, 0, 0, 0.25);
+    
+    // >input[type='checkbox'] {
+    //   appearance: none;
+    //   background-color: #1c1c1c;
+    //   margin: 0;
+    //   width: 18px;
+    //   height: 14px;
+    //   border: 2px solid $green;
+    //   border-radius: 2px;
+    //   display: grid;
+    //   place-content: center;
+    // }
+  }
+}
 
   .hello-button-wrapper {
     width: 550px;
@@ -189,4 +276,4 @@
       color: $green;
     }
   }
-}
+
