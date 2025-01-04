@@ -21,18 +21,18 @@
 <div class="last-form-element">
     <label for="issue">Was ist ihr Anliegen?</label>
     <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" minlength="10" name="issue" [placeholder]="!message.valid && message.touched ? 'Was müssen Sie entwickeln?' : 'Hallo Sebastian, ich interessiere mich für...'" [ngClass]="{'placeholder-color-red': !message.valid && message.touched}" required></textarea>
-    <!-- @if (!message.valid && message.touched) {
-        <span>Please enter a message</span>
-    } -->
 </div>
 <div class="checkbox-form">
 <div class="checkbox-wrapper">
-    <input type="checkbox" name="accept-privacy-policy" class="checkbox">
+    <input type="checkbox" name="accept-privacy-policy" class="checkbox" [(ngModel)]="contactData.acceptPrivacyPolicy" (ngModelChange)="onPrivacyPolicyChange($event)">
 </div>
-    <p>Ich habe die <span>Datenschutzrichtlinie</span> gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</p>
+<div class="privacy-policy-wrapper">
+    <p>Ich habe die <span>Datenschutzerklärung</span> gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</p>
+    <span class="notice-accept" *ngIf="showPrivacyPolicyNotice">Bitte akzeptieren Sie die Datenschutzerklärung.</span>
+</div>
 </div>
 <div class="hello-button-wrapper">
-    <button class="hello-button" value="onSubmit" disabled>Sag Hallo ;)</button>
+    <button class="hello-button" type="submit" [disabled]="!isFormValid()">Sag Hallo ;)</button>
 </div>
 </form>
 </div>

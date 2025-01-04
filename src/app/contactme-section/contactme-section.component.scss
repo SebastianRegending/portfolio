@@ -143,31 +143,34 @@
       }
     }
   }
-  // .checkbox-wrapper {
-  //   width: 550px;
-  //   height: 30px;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: flex-start;
-  //   margin: 40px 0;
+
 .checkbox-form {
   width: 550px;
   height: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
   margin: 40px 0;
-  > p {
-    font-family: "Karla";
-    font-weight: 400;
-    font-size: 15px;
-    margin: 0;
-    color: white;
-    > span {
-      font-family: "Fira Code";
+  >.privacy-policy-wrapper {
+    width: 550px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    > p {
+      font-family: "Karla";
       font-weight: 400;
       font-size: 15px;
-      color: $green;
+      margin: 0;
+      color: white;
+      > span {
+        font-family: "Fira Code";
+        font-weight: 400;
+        font-size: 15px;
+        color: $green;
+      }
     }
   }
 }
@@ -197,8 +200,8 @@
     border-radius: 2px;
     display: inline-block;
     border: 2px solid $green;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     position: relative;
   }
   .checkbox-wrapper input[type=checkbox]:before,
@@ -233,20 +236,17 @@
   }
   .checkbox-wrapper input[type=checkbox]:focus {
     outline: calc(2px / 2) dotted rgba(0, 0, 0, 0.25);
-    
-    // >input[type='checkbox'] {
-    //   appearance: none;
-    //   background-color: #1c1c1c;
-    //   margin: 0;
-    //   width: 18px;
-    //   height: 14px;
-    //   border: 2px solid $green;
-    //   border-radius: 2px;
-    //   display: grid;
-    //   place-content: center;
-    // }
+
+  }
+
+  .notice-accept {
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 14px;
+    color: #EC7B7BCC
   }
 }
+
 
   .hello-button-wrapper {
     width: 550px;
@@ -275,5 +275,9 @@
       border-color: $green;
       color: $green;
     }
+  }
+
+  .hello-button:disabled {
+    pointer-events: none;
   }
 

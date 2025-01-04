@@ -32,6 +32,7 @@
         color: $grey;
         text-decoration: none;
         transition: ease-in-out 0.25s;
+        cursor: pointer;
         &:hover {
             color: $green;
         }

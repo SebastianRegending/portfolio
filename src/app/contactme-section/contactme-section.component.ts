@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -11,6 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contactme-section.component.scss'
 })
 export class ContactmeSectionComponent {
+  @ViewChild('contactForm') contactForm!: NgForm;
 
   http = inject(HttpClient);
 
@@ -18,9 +19,11 @@ contactData = {
   name: '',
   email: '',
   message: '',
+  acceptPrivacyPolicy: false,
 }
 
 mailTest = true;
+showPrivacyPolicyNotice = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -50,6 +53,14 @@ mailTest = true;
 
       ngForm.resetForm();
     }
+  }
+
+  isFormValid(): boolean {
+    return (this.contactForm?.valid ?? false) && this.contactData.acceptPrivacyPolicy;
+  }
+
+  onPrivacyPolicyChange(checked: boolean) {
+    this.showPrivacyPolicyNotice = !checked;
   }
 
 }
