@@ -1,18 +1,15 @@
 import { Component } from '@angular/core';
-import { ScrollService } from '../../../services/scroll.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  constructor(private scrollService: ScrollService) {}
+  constructor() {}
 
-  scrollToElement(element: HTMLElement) {
-    this.scrollService.scrollToElement(element);
-  }
 }
 

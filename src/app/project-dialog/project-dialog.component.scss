@@ -1,0 +1,159 @@
+@import '../../styles.scss';
+
+.project-dialog {
+    width: 1250px;
+    height: 650px;
+    background: linear-gradient(to right top, #1c1c1c, #08463b);
+    border: 1px solid $green;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 56px;
+}
+
+.project-information {
+    width: 480px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    >h1 {
+        font-family: 'Karla';
+        font-weight: 700;
+        font-size: 128px;
+        color: $green;
+        margin: 0;
+    }
+    >h2 {
+        font-family: 'Fira Code';
+        font-weight: 700;
+        font-size: 64px;
+        color: white;
+        margin: 0;
+    }
+    >h3 {
+        font-family: 'Fira Code';
+        font-weight: 700;
+        font-size: 24px;
+        color: $green;
+        margin: 0;
+    }
+    >p {
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 18px;
+        color: white;
+        margin: 0;
+    }
+    >.project-skills {
+        width: 100%;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        >.single-skill {
+            width: fit-content;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Karla';
+        font-weight: 400;
+        font-size: 16px;
+        color: white;
+        >img {
+            width: 21px;
+            height: 24px;
+        }
+        }
+    }
+
+    .link-button-wrapper {
+        width: 330px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >.link-button {
+            width: 150px;
+            height: 48px;
+            border: 1px solid white;
+            border-radius: 100px;
+            padding: 0 24px;
+            background-color: transparent;
+            font-family: "Karla";
+            font-weight: 400;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+              border-color: $green;
+              color: $green;
+              >img {
+                transition: all 0.25s ease-in-out;
+                transform: translate(6px, -6px) rotate(-45deg) scale(1.2);
+              }
+            }
+            >img {
+                width: 12px;
+                height: 12px;
+                transform: rotate(-45deg);
+            }
+          }
+    }
+}
+
+.project-screenshot {
+    width: 480px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 40px;
+    >img {
+        width: 520px;
+        height: 370px;
+    }
+
+    .close-button {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+        &:hover {
+            transform: scale(1.4);
+            content: url('../../assets/img/close-big-green.png');
+        }
+    }
+
+    .next-project {
+        width: 130px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 18px;
+        color: $green;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+        >img {
+            width: 18px;
+            height: 18px;
+        }
+        &:hover {
+            color: white;
+            >img {
+                transition: all 0.25s ease-in-out;
+                transform: translate(4px) scale(1.2);
+            }
+        }
+    }
+
+}
+

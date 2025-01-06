@@ -130,44 +130,48 @@
     justify-content: space-between;
     align-items: center;
     margin: 40px 0 180px 0;
-    > .check-my-work {
-      width: 174px;
-      height: 48px;
-      border: 1px solid white;
-      border-radius: 100px;
-      padding: 0 24px;
-      background-color: transparent;
-      font-family: "Karla";
-      font-weight: 400;
-      font-size: 18px;
-      color: $grey;
-      cursor: pointer;
-      overflow: hidden;
-      transition: text-indent 1s, border-color 1s, color 1s;
-      &:hover {
-        text-indent: -250%;
-        border-color: $green;
-        color: $green;
+    > a {
+      > .check-my-work {
+        width: 174px;
+        height: 48px;
+        border: 1px solid white;
+        border-radius: 100px;
+        padding: 0 24px;
+        background-color: transparent;
+        font-family: "Karla";
+        font-weight: 400;
+        font-size: 18px;
+        color: $grey;
+        cursor: pointer;
+        overflow: hidden;
+        transition: text-indent 1s, border-color 1s, color 1s;
+        &:hover {
+          text-indent: -250%;
+          border-color: $green;
+          color: $green;
+        }
       }
     }
-    > .contact-me {
-      width: 145px;
-      height: 48px;
-      border: 1px solid white;
-      border-radius: 100px;
-      padding: 0 24px;
-      background-color: transparent;
-      font-family: "Karla";
-      font-weight: 400;
-      font-size: 18px;
-      color: $grey;
-      cursor: pointer;
-      overflow: hidden;
-      transition: text-indent 1s, border-color 1s, color 1s;
-      &:hover {
-        text-indent: -250%;
-        border-color: $green;
-        color: $green;
+    > a {
+      > .contact-me {
+        width: 145px;
+        height: 48px;
+        border: 1px solid white;
+        border-radius: 100px;
+        padding: 0 24px;
+        background-color: transparent;
+        font-family: "Karla";
+        font-weight: 400;
+        font-size: 18px;
+        color: $grey;
+        cursor: pointer;
+        overflow: hidden;
+        transition: text-indent 1s, border-color 1s, color 1s;
+        &:hover {
+          text-indent: -250%;
+          border-color: $green;
+          color: $green;
+        }
       }
     }
   }
