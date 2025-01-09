@@ -77,12 +77,12 @@
     background-color: #3dcfb64a;
     > .text-wrapper {
       > img {
-        display: flex !important;
+        transform: scale(1);
       }
     }
   }
   > span {
-    width: 350px;
+    width: fit-content;
     height: 22px;
     font-family: "Karla";
     font-weight: 400;
@@ -102,6 +102,8 @@
     > img {
       width: 13px;
       height: 13px;
+      transform: scale(0);
+      transition: transform 0.25s ease-in-out;
     }
   }
 

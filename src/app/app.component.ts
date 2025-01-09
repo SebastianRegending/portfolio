@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule, HeaderComponent, HeroSectionComponent, AboutmeSectionComponent, SkillsSectionComponent, ProjectsSectionComponent, ProjectDialogComponent, ContactmeSectionComponent, FooterComponent, ProjectDialogComponent],
+  imports: [CommonModule, RouterOutlet, RouterModule, HeaderComponent, HeroSectionComponent, AboutmeSectionComponent, SkillsSectionComponent, ProjectsSectionComponent, ContactmeSectionComponent, FooterComponent, ProjectDialogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

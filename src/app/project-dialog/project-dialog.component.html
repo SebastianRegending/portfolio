@@ -1,3 +1,4 @@
+<section class="project-dialog-wrapper">
 <div class="project-dialog" *ngIf="myProjects && myProjects.length > 0">
     <div class="project-information" *ngFor="let project of [myProjects[currentIndex]]">
         <div class="headline-wrapper">
@@ -17,9 +18,10 @@
             <a href="{{ link.livetest }}" target="_blank"><button class="link-button">Live Test <img src="../../assets/img/arrow_forward-green.png" alt="arrow_forward-green"></button></a>
         </div>
     </div>
-    <div class="project-screenshot">
-    <img class="close-button" src="../../assets/img/close_small.png" alt="close_small">
-    <img src="../../assets/img/join-big.png" alt="join">
+    <div class="project-screenshot" *ngFor="let project of [myProjects[currentIndex]]">
+    <img class="close-button" src="../../assets/img/close_small.png" alt="close_small" (click)="close()">
+    <img src="{{ project.screenshot }}" alt="project-screenshot">
     <div class="next-project" (click)="nextProject()">Next project <img src="../../assets/img/arrow_forward-green.png" alt="arrow_forward-green"></div>
 </div>
 </div>
+</section>

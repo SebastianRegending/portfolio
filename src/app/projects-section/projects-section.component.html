@@ -6,19 +6,20 @@
             <span>Entdecken Sie hier eine Auswahl meiner Arbeiten.<br>
                 Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen.</span>
             <div class="projects-box">
-                <div class="single-project" (mouseover)="showProjectScreenshotJoin()" (mouseout)="hideProjectScreenshotJoin()">
-                    <div class="text-wrapper">Join<img class="d-none" src="../../assets/img/arrow_outward.png" alt="arrow_outward">
+                <div class="single-project" (mouseover)="showProjectScreenshotJoin()" (mouseout)="hideProjectScreenshotJoin()" (click)="openProjectDialog(0)">
+                    <div class="text-wrapper">Join<img src="../../assets/img/arrow_outward.png" alt="arrow_outward">
                     </div>
-                    <span>HTML <div class="separator">|</div> CSS <div class="separator">|</div> Javascript <div class="separator">|</div> Firebase</span>
+                    <span>HTML <div class="separator">|</div>CSS <div class="separator">|</div> JavaScript <div class="separator">|</div> Firebase</span>
                 </div>
-                <div class="single-project" (mouseover)="showProjectScreenshotSharkie()" (mouseout)="hideProjectScreenshotSharkie()">
-                    <div class="text-wrapper">Sharkie<img class="d-none" src="../../assets/img/arrow_outward.png" alt="arrow_outward">
+                <div class="single-project" (mouseover)="showProjectScreenshotSharkie()" (mouseout)="hideProjectScreenshotSharkie()"  (click)="openProjectDialog(1)">
+                    <div class="text-wrapper">Sharkie<img src="../../assets/img/arrow_outward.png" alt="arrow_outward">
                     </div>                  
-                    <span>HTML <div class="separator">|</div> CSS <div class="separator">|</div> Javascript <div class="separator">|</div> OOP</span>
+                    <span>HTML <div class="separator">|</div> CSS <div class="separator">|</div> JavaScript <div class="separator">|</div> OOP</span>
                 </div>
             </div>
         </div>
     </div>
+    <app-project-dialog *ngIf="isVisible" (closeDialog)="closeProjectDialog()" [currentIndex]="currentIndex" [myProjects]="myProjects"></app-project-dialog>
     <div class="screenshot-box-wrapper">
     <div class="screenshot-box-join" [class.hidden]="hideJoinScreenshot">
         <img class="slantedlines-small-join" src="../../assets/img/slantedlines_small.png" alt="slantedlines_small">
