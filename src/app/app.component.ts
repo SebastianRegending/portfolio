@@ -6,7 +6,6 @@ import { HeroSectionComponent } from "./hero-section/hero-section.component";
 import { AboutmeSectionComponent } from "./aboutme-section/aboutme-section.component";
 import { SkillsSectionComponent } from "./skills-section/skills-section.component";
 import { ProjectsSectionComponent } from "./projects-section/projects-section.component";
-import { ProjectDialogComponent } from "./project-dialog/project-dialog.component";
 import { ContactmeSectionComponent } from "./contactme-section/contactme-section.component";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { RouterModule } from '@angular/router';
@@ -25,8 +24,7 @@ import { TranslateService } from "@ngx-translate/core";
     SkillsSectionComponent, 
     ProjectsSectionComponent, 
     ContactmeSectionComponent, 
-    FooterComponent, 
-    ProjectDialogComponent,
+    FooterComponent,
     TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
