@@ -5,7 +5,7 @@
         <h1>{{ project.position }}</h1>
         <h2>{{ project.name }}</h2>
     </div>
-        <h3>Worum geht es in diesem Projekt?</h3>
+        <h3>{{ 'whataboutproject-projectdialog' | translate}}</h3>
         <p>{{ project.description }}</p>
         <div class="project-skills" >
             <div class="single-skill" *ngFor="let skill of project.skills">
@@ -21,7 +21,7 @@
     <div class="project-screenshot" *ngFor="let project of [myProjects[currentIndex]]">
     <img class="close-button" src="../../assets/img/close_small.png" alt="close_small" (click)="close()">
     <img src="{{ project.screenshot }}" alt="project-screenshot">
-    <div class="next-project" (click)="nextProject()">Next project <img src="../../assets/img/arrow_forward-green.png" alt="arrow_forward-green"></div>
+    <div class="next-project" (click)="nextProject()">{{ 'nextproject-projectdialog' | translate}} <img src="../../assets/img/arrow_forward-green.png" alt="arrow_forward-green"></div>
 </div>
 </div>
 </section>

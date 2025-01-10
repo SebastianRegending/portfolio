@@ -1,16 +1,22 @@
 import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 import { CommonModule } from '@angular/common';
+import { sharedImports } from '../../app/shared/imports';
+import { LanguageService } from '../shared/language.service';
 
 @Component({
   selector: 'app-projects-section',
   standalone: true,
-  imports: [ProjectDialogComponent, CommonModule],
+  imports: [ProjectDialogComponent, CommonModule, sharedImports],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss'
 })
 export class ProjectsSectionComponent {
+
+  constructor(private languageService: LanguageService) {}
+  useLanguage(language: string): void {
+    this.languageService.useLanguage(language);
+  }
 
   hideJoinScreenshot: boolean = true;
   hideSharkieScreenshot: boolean = true;

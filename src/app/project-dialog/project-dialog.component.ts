@@ -2,17 +2,22 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Input, Output, EventEmitter } from '@angular/core';
+import { sharedImports } from '../shared/imports';
+import { LanguageService } from '../shared/language.service';
 
 @Component({
   selector: 'app-project-dialog',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, sharedImports],
   templateUrl: './project-dialog.component.html',
   styleUrl: './project-dialog.component.scss'
 })
 export class ProjectDialogComponent implements OnInit {
 
-constructor() { }
+constructor(private languageService: LanguageService) {}
+  useLanguage(language: string): void {
+    this.languageService.useLanguage(language);
+  }
 
 ngOnInit(): void {
 }

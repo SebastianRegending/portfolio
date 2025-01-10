@@ -1,38 +1,38 @@
 <section id="contactme">
 <div class="content-wrapper">
 <div class="lets-work">
-    <h2>Kontaktier mich</h2>
-    <h3>Lassen Sie uns zusammenarbeiten</h3>
-    <h4>Müssen Sie ein Problem lösen?</h4>
-    <p>Kontaktieren Sie mich über dieses Formular.<br>
-        Ich bin daran interessiert, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.<br><br>
-        Sie brauchen einen Frontend-Entwickler? <span>Lassen Sie uns reden!</span></p>
+    <h2>{{ 'contactme-contactsection' | translate }}</h2>
+    <h3>{{ 'letsworktogether-contactsection' | translate }}</h3>
+    <h4>{{ 'solveproblem-contactsection' | translate }}</h4>
+    <p>{{ 'contactmeformular-contactsection' | translate }}<br>
+        {{ 'iminterested-contactsection' | translate }}<br><br>
+        {{ 'youneed-contactsection' |translate }} <span>{{ 'youneedspan-contactsection' | translate }}</span></p>
 </div>
 <div class="form-wrapper">
 <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
     <div class="form-element">
-    <label for="name">Wie heißen Sie?</label>
-    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" [placeholder]="!name.valid && name.touched ? 'Ups! Ihr Name scheint zu fehlen' : 'Ihr Name steht hier'" [ngClass]="{'placeholder-color-red': !name.valid && name.touched}" required>
+    <label for="name">{{ 'formname-contactsection' | translate }}</label>
+    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" [placeholder]="!name.valid && name.touched ? ('alertnamemissing-contactserction' | translate) : ('placeholdername-contactsection' | translate)" [ngClass]="{'placeholder-color-red': !name.valid && name.touched}" required>
 </div>
 <div class="form-element">
-    <label for="email">Wie lautet ihre Email?</label>
-    <input #email="ngModel" [(ngModel)]="contactData.email" type="text" name="email" [placeholder]="!email.valid && email.touched ? 'Hoppla! Ihre E-Mail ist erforderlich' : 'Wie lautet ihre Email?'" [ngClass]="{'placeholder-color-red': !email.valid && email.touched}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+    <label for="email">{{ 'formmail-contactsection' | translate }}</label>
+    <input #email="ngModel" [(ngModel)]="contactData.email" type="text" name="email" [placeholder]="!email.valid && email.touched ? ('alertmailmissing-contactsection' | translate) : ('placeholdermail-contactsection' | translate)" [ngClass]="{'placeholder-color-red': !email.valid && email.touched}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
 </div>
 <div class="last-form-element">
-    <label for="issue">Was ist ihr Anliegen?</label>
-    <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" minlength="10" name="issue" [placeholder]="!message.valid && message.touched ? 'Was müssen Sie entwickeln?' : 'Hallo Sebastian, ich interessiere mich für...'" [ngClass]="{'placeholder-color-red': !message.valid && message.touched}" required></textarea>
+    <label for="issue">{{ 'formconcern-contactsection' | translate }}</label>
+    <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" minlength="10" name="issue" [placeholder]="!message.valid && message.touched ? ('altertmessage-contactsection' | translate) : ('placeholdermessage-contactsection' | translate)" [ngClass]="{'placeholder-color-red': !message.valid && message.touched}" required></textarea>
 </div>
 <div class="checkbox-form">
 <div class="checkbox-wrapper">
     <input type="checkbox" name="accept-privacy-policy" class="checkbox" [(ngModel)]="contactData.acceptPrivacyPolicy" (ngModelChange)="onPrivacyPolicyChange($event)">
 </div>
 <div class="privacy-policy-wrapper">
-    <p>Ich habe die <span>Datenschutzerklärung</span> gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.</p>
-    <span class="notice-accept" *ngIf="showPrivacyPolicyNotice">Bitte akzeptieren Sie die Datenschutzerklärung.</span>
+    <p>{{ 'ive-contactsection' | translate }} <span>{{ 'privacypolicy-contactsection' | translate }}</span> {{ 'agree-contactsection' | translate }}</p>
+    <span class="notice-accept" *ngIf="showPrivacyPolicyNotice">{{ 'acceptprivacypolicy-contactsection' | translate }}</span>
 </div>
 </div>
 <div class="hello-button-wrapper">
-    <button class="hello-button" type="submit" [disabled]="!isFormValid()">Sag Hallo ;)</button>
+    <button class="hello-button" type="submit" [disabled]="!isFormValid()">{{ 'sayhello-contactsection' | translate }}</button>
 </div>
 </form>
 </div>

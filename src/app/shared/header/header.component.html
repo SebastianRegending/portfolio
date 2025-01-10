@@ -1,16 +1,18 @@
 <header class="header">
     <nav class="navigation">
-        <button class="language-switch">Switch!</button>
+        <!-- <button class="language-switch">Switch!</button> -->
+        <button (click)="useLanguage('en')">en</button>
+        <button (click)="useLanguage('de')">de</button>
     <div class="link-wrapper">       
-        <a class="link" href="#aboutme">About me</a>
+        <a class="link" href="#aboutme">{{ 'aboutme-header' | translate }}</a>
     <div class="green-point"></div>
     </div> 
         <div class="link-wrapper">
-        <a class="link" href="#skills">Skills</a>
+        <a class="link" href="#skills">{{ 'skills-header'| translate }}</a>
         <div class="green-point"></div>
     </div>
     <div class="link-wrapper">      
-        <a class="link" href="#projects">Projects</a>
+        <a class="link" href="#projects">{{ 'projects-header' | translate }}</a>
         <div class="green-point"></div>
     </div>  
     </nav>

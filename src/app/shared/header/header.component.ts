@@ -1,15 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../language.service';
+import { sharedImports } from '../imports';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [sharedImports, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  constructor() {}
-
+  constructor(private languageService: LanguageService) {}
+  useLanguage(language: string): void {
+    this.languageService.useLanguage(language);
+  }
 }
 

@@ -2,15 +2,23 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { sharedImports } from '../shared/imports';
+import { LanguageService } from '../shared/language.service';
 
 @Component({
   selector: 'app-contactme-section',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, sharedImports],
   templateUrl: './contactme-section.component.html',
   styleUrl: './contactme-section.component.scss'
 })
 export class ContactmeSectionComponent {
+
+  constructor(private languageService: LanguageService) {}
+  useLanguage(language: string): void {
+    this.languageService.useLanguage(language);
+  }
+  
   @ViewChild('contactForm') contactForm!: NgForm;
 
   http = inject(HttpClient);
