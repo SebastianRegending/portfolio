@@ -45,7 +45,7 @@
     color: $green;
   }
   > .content-right {
-    width: 120px;
+    width: fit-content;
     height: 130px;
     display: flex;
     flex-direction: column;

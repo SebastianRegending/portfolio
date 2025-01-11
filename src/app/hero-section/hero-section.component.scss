@@ -124,15 +124,16 @@
     margin: 0;
   }
   .button-wrapper {
-    width: 363px;
+    width: fit-content;
     height: 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 40px 0 180px 0;
+    gap: 24px;
     > a {
       > .check-my-work {
-        width: 174px;
+        width: fit-content;
         height: 48px;
         border: 1px solid white;
         border-radius: 100px;
@@ -154,7 +155,7 @@
     }
     > a {
       > .contact-me {
-        width: 145px;
+        width: fit-content;
         height: 48px;
         border: 1px solid white;
         border-radius: 100px;

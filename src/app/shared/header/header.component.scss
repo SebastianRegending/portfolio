@@ -10,29 +10,27 @@
 }
 
 .navigation {
-  .language-switcher {
-    cursor: pointer;
-    perspective: 800px;
-    > img {
-      width: 72px;
-      transition: all 0.3s ease-in-out;
-      transform-style: preserve-3d;
-      &.fade {
-        opacity: 0.2;
-        transform: rotateY(90deg) scale(0.95);
-      }
-      &:hover {
-        transform: scale(1.05);
-        filter: brightness(1.05);
-      }
-    }
-  }
-
-  width: 420px;
+  width: fit-content;
   height: 28px;
   display: flex;
   align-items: center;
   gap: 24px;
+  .language-switcher {
+    cursor: pointer;
+    perspective: 800px;
+    &__icon {
+      width: 72px;
+      transition: all 0.2s ease-in-out;
+      transform-style: preserve-3d;
+      &:hover {
+        transform: scale(1.05);
+        filter: brightness(1.05);
+      }
+      &--animating {
+        animation: flipLanguage 0.4s ease-in-out;
+      }
+    }
+  }
   > button {
     width: 84px;
     height: 28px;
@@ -76,6 +74,22 @@
       background-color: $green;
       transform: scale(0);
       transition: transform 0.25s ease-in-out;
+    }
+  }
+
+  @keyframes flipLanguage {
+    0% {
+      transform: rotateY(0deg);
+    }
+
+    50% {
+      transform: rotateY(90deg) scale(0.95);
+      opacity: 0.2;
+    }
+
+    100% {
+      transform: rotateY(0deg);
+      opacity: 1;
     }
   }
 }

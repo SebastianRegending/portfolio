@@ -1,8 +1,13 @@
 <header class="header">
     <nav class="navigation">
-        <!-- <button class="language-switch">Switch!</button> -->
-        <button (click)="useLanguage('en')">en</button>
-        <button (click)="useLanguage('de')">de</button>
+        <div class="language-switcher" (click)="useLanguage(isGerman ? 'de' : 'en')">
+            <img
+              class="language-switcher__icon"
+              [class.language-switcher__icon--animating]="isAnimating"
+              [src]="currentLanguageIcon"
+              [alt]="isGerman ? 'Deutsch' : 'English'"
+            />
+          </div>
     <div class="link-wrapper">       
         <a class="link" href="#aboutme">{{ 'aboutme-header' | translate }}</a>
     <div class="green-point"></div>

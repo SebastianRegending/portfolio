@@ -12,8 +12,25 @@ import { sharedImports } from '../imports';
 })
 export class HeaderComponent {
   constructor(private languageService: LanguageService) {}
+  isGerman = true;
+  isAnimating = false;
+  currentLanguageIcon = '../../assets/img/en-active.png';
+
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
+    this.isAnimating = true;
+
+    setTimeout(() => {
+      this.isGerman = !this.isGerman;
+      this.currentLanguageIcon = this.isGerman
+        ? '../assets/img/en-active.png'
+        : '../assets/img/de-active.png';
+    }, 200);
+
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 400);
   }
+
 }
 

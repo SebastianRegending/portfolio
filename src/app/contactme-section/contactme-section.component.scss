@@ -275,6 +275,10 @@
       border-color: $green;
       color: $green;
     }
+    &:disabled {
+      border-color: #D9D9D94D;
+      color: #D9D9D94D;
+    }
   }
 
   .hello-button:disabled {
