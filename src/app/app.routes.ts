@@ -7,5 +7,4 @@ export const routes: Routes = [
   { path: '', component: MainContentComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
-//   { path: 'main-content', redirectTo: '/main-content', pathMatch: 'full' },
 ];

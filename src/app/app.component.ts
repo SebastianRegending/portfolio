@@ -2,11 +2,6 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./shared/header/header.component";
-import { HeroSectionComponent } from "./hero-section/hero-section.component";
-import { AboutmeSectionComponent } from "./aboutme-section/aboutme-section.component";
-import { SkillsSectionComponent } from "./skills-section/skills-section.component";
-import { ProjectsSectionComponent } from "./projects-section/projects-section.component";
-import { ContactmeSectionComponent } from "./contactme-section/contactme-section.component";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from "@ngx-translate/core";
@@ -19,11 +14,6 @@ import { TranslateService } from "@ngx-translate/core";
     RouterOutlet, 
     RouterModule, 
     HeaderComponent, 
-    HeroSectionComponent, 
-    AboutmeSectionComponent, 
-    SkillsSectionComponent, 
-    ProjectsSectionComponent, 
-    ContactmeSectionComponent, 
     FooterComponent,
     TranslateModule],
   templateUrl: './app.component.html',

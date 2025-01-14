@@ -4,11 +4,12 @@ import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { sharedImports } from '../shared/imports';
 import { LanguageService } from '../shared/language.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contactme-section',
   standalone: true,
-  imports: [FormsModule, CommonModule, sharedImports],
+  imports: [FormsModule, CommonModule, sharedImports, RouterLink],
   templateUrl: './contactme-section.component.html',
   styleUrl: './contactme-section.component.scss'
 })

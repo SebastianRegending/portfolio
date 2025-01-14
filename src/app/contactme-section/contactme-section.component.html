@@ -27,7 +27,7 @@
     <input type="checkbox" name="accept-privacy-policy" class="checkbox" [(ngModel)]="contactData.acceptPrivacyPolicy" (ngModelChange)="onPrivacyPolicyChange($event)">
 </div>
 <div class="privacy-policy-wrapper">
-    <p>{{ 'ive-contactsection' | translate }} <span>{{ 'privacypolicy-contactsection' | translate }}</span> {{ 'agree-contactsection' | translate }}</p>
+    <p>{{ 'ive-contactsection' | translate }} <span routerLink="/privacy-policy">{{ 'privacypolicy-contactsection' | translate }}</span> {{ 'agree-contactsection' | translate }}</p>
     <span class="notice-accept" *ngIf="showPrivacyPolicyNotice">{{ 'acceptprivacypolicy-contactsection' | translate }}</span>
 </div>
 </div>

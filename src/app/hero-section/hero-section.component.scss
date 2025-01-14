@@ -239,3 +239,30 @@
     transform: translateY(-8px);
   }
 }
+
+@media screen and (max-width: 1020px) {
+  .hero {
+    padding: 0 24px;
+    h1 {
+      font-size: 96px;
+    }
+    .hero-name {
+      width: 550px;
+    >span {
+      font-size: 32px;
+    }
+  }
+  }
+  
+}
+
+@media screen and (max-width: 680px) {
+  .hero {
+    // flex-direction: column;
+    align-items: center;
+    >.scroll-down {
+      height: 296px;
+    }
+  }
+  }
+
