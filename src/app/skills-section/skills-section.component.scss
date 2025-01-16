@@ -38,6 +38,7 @@
 
   .technologies-box {
     width: 520px;
+    width: 100%;
     height: 550px;
     border: 1px solid $green;
     border-radius: 30px;
@@ -53,7 +54,7 @@
     }
     > .box-content {
       width: 100%;
-      height: 500px;
+      height: 100%;
       display: flex;
       flex-direction: column;
       gap: 24px;
@@ -168,8 +169,8 @@
       width: 190px;
       height: 130px;
       position: relative;
-    top: -240px;
-    right: -38px;
+      top: -240px;
+      right: -38px;
       visibility: hidden;
       transition: ease-in-out 2.75s;
       z-index: 200;
@@ -186,6 +187,89 @@
       }
       > .tooltip-wrapper {
         visibility: visible;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  #skills {
+    height: fit-content;
+    padding: 48px;
+  }
+  .technologies-wrapper {
+    > .technologies-box {
+      > h3 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .tech-skills-wrapper {
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .skillset {
+    width: 100%;
+    padding: 52px 0 0 0;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 864px) {
+  #skills {
+    justify-content: center;
+    align-items: center;
+    padding: 74px 48px 0;
+  }
+  .technologies-wrapper {
+    width: 370px;
+  }
+  .tech-skills-wrapper {
+    width: 370px;
+    height: fit-content;
+    > .technologies-wrapper {
+      width: 370px;
+      > .technologies-box {
+        width: 100%;
+      }
+    }
+  }
+  .skillset {
+    height: fit-content;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .technologies-wrapper {
+    width: 270px;
+  }
+  .tech-skills-wrapper {
+    width: 270px;
+    height: fit-content;
+    > .technologies-wrapper {
+      width: 270px;
+      height: fit-content;
+      > .technologies-box {
+        width: 100%;
+        height: fit-content;
+        padding: 16px 20px;
+        >h3 {
+          font-size: 47px;
+          margin: 0;
+        }        
+      }
+      .box-content {
+        >a {
+          >.lets-talk {
+            margin: 0;
+          }
+        }
       }
     }
   }
