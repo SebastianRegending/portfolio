@@ -1,4 +1,9 @@
 @import "../../../styles.scss";
+
+.d-none {
+  display: none !important;
+}
+
 .header {
   width: 100%;
   height: 98px;
@@ -7,6 +12,50 @@
   align-items: center;
   padding: 0 92px;
   background: linear-gradient(to right bottom, #1c1c1c, #08463b);
+  >.menu {
+    width: 56px;
+    height: 34px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    z-index: 5;
+  }
+  .line {
+    fill: none;
+    stroke: $green;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
 }
 
 .navigation {
@@ -92,4 +141,88 @@
       opacity: 1;
     }
   }
+}
+
+.navigation-mobile-wrapper {
+  width: 100%;
+  height: 0px;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  right: -300px;
+  z-index: 500;
+  transition: right 0.6s ease-in-out;
+  &.is-open {
+    right: 60px;    
+  }
+>.navigation-mobile {
+  width: 240px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 16px;
+  background: linear-gradient(to right top, #1c1c1c, #08463b);
+  border: 1px solid $green;
+  border-radius: 30px;
+    transition: transform 0.6s ease-in-out;
+
+.language-switcher {
+  cursor: pointer;
+  perspective: 800px;
+  &__icon {
+    width: 72px;
+    transition: all 0.2s ease-in-out;
+    transform-style: preserve-3d;
+    &:hover {
+      transform: scale(1.05);
+      filter: brightness(1.05);
+    }
+    &--animating {
+      animation: flipLanguage 0.4s ease-in-out;
+    }
+  }
+}
+> .link-wrapper {
+  width: fit-content;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+  > a {
+    font-family: "Fira Code";
+    font-weight: 400;
+    font-size: 18px;
+    color: $grey;
+    text-decoration: none;
+    transition: ease-in-out 0.25s;
+    cursor: pointer;
+  }
+}
+}
+}
+
+@media screen and (max-width: 864px) {
+  .navigation-mobile-wrapper {
+  >.navigation-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  .header {
+    align-items: center;
+    padding: 0 48px;
+    >.navigation {
+      display: none !important;
+    }  
+    >.menu {
+      display: flex !important; 
+    }
+}
 }

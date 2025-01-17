@@ -32,5 +32,11 @@ export class HeaderComponent {
     }, 400);
   }
 
+  isActive = false;
+
+  toggleClass() {
+    this.isActive = !this.isActive;
+  }
+
 }
 

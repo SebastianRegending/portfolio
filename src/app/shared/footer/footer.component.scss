@@ -1,5 +1,9 @@
 @import "../../../styles.scss";
 
+.d-none {
+  display: none !important;
+}
+
 .footer {
   width: 100%;
   height: 160px;
@@ -85,6 +89,45 @@
           color: $green;
         }
       }
+    }
+  }
+}
+.copyright-mobile {
+  width: fit-content;
+  height: 22px;
+  font-family: "Fira Code";
+  font-weight: 400;
+  font-size: 18px;
+  color: $green;
+}
+
+@media screen and (max-width: 864px) {
+  .footer {
+    height: 180px;
+    flex-direction: column;
+    padding: 0 48px;
+    > .footer-content {
+      width: 100%;
+      > .copyright {
+        display: none !important;
+      }
+    }
+    .copyright-mobile {
+      width: 100%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      margin: 24px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .footer {
+    height: fit-content;
+    padding: 0 24px;
+    > .copyright-mobile {
+      font-size: 16px;
     }
   }
 }
