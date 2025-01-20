@@ -17,6 +17,7 @@
             <a href="{{ link.github }}" target="_blank"><button class="link-button">GitHub <img src="../../assets/img/arrow_forward-green.png" alt="arrow_forward-green"></button></a>
             <a href="{{ link.livetest }}" target="_blank"><button class="link-button">Live Test <img src="../../assets/img/arrow_forward-green.png" alt="arrow_forward-green"></button></a>
         </div>
+        <div class="next-project-mobile d-none" (click)="nextProject()">{{ 'nextproject-projectdialog' | translate}} <img src="../../assets/img/arrow_forward-green.png" alt="arrow_forward-green"></div>
     </div>
     <div class="project-screenshot" *ngFor="let project of [myProjects[currentIndex]]">
     <img class="close-button" src="../../assets/img/close_small.png" alt="close_small" (click)="close()">

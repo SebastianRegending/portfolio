@@ -35,7 +35,7 @@ export class HeaderComponent {
   isActive = false;
 
   toggleClass() {
-    this.isActive = !this.isActive;
+    this.isActive = !this.isActive;    
   }
 
 }

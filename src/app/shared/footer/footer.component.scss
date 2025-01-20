@@ -103,11 +103,12 @@
 
 @media screen and (max-width: 864px) {
   .footer {
-    height: 180px;
+    height: fit-content;
     flex-direction: column;
     padding: 0 48px;
     > .footer-content {
       width: 100%;
+      margin: 24px 0 0 0;
       > .copyright {
         display: none !important;
       }
