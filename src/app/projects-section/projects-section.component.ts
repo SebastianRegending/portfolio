@@ -9,10 +9,9 @@ import { LanguageService } from '../shared/language.service';
   standalone: true,
   imports: [ProjectDialogComponent, CommonModule, sharedImports],
   templateUrl: './projects-section.component.html',
-  styleUrl: './projects-section.component.scss'
+  styleUrl: './projects-section.component.scss',
 })
 export class ProjectsSectionComponent {
-
   constructor(private languageService: LanguageService) {}
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
@@ -46,80 +45,80 @@ export class ProjectsSectionComponent {
     if (this.currentIndex === 0) {
       this.selectedProject = 'Join';
     } else if (this.currentIndex === 1) {
-      this.selectedProject = 'Sharkie';      
+      this.selectedProject = 'Sharkie';
     }
     this.isVisible = true;
     document.body.style.overflow = 'hidden';
   }
-  
+
   closeProjectDialog() {
     this.isVisible = false;
     document.body.style.overflow = 'auto';
   }
 
   myProjects = [
-    { 
+    {
       position: '01',
       name: 'Join',
-      description: 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
+      description:
+        'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
       screenshot: '../../assets/img/join-big.png',
       skills: [
         {
-        image: '../../assets/img/htmlsmall-green.png',
-        text: 'HTML'
-      },
-      {
-        image: '../../assets/img/csssmall-green.png',
-        text: 'CSS'
-      },
-      {
-        image: '../../assets/img/javascriptsmall-green.png',
-        text: 'JavaScript'
-      },
-      {
-        image: '../../assets/img/firebasesmall-green.png',
-        text: 'Firebase'
-      }
+          image: '../../assets/img/htmlsmall-green.png',
+          text: 'HTML',
+        },
+        {
+          image: '../../assets/img/csssmall-green.png',
+          text: 'CSS',
+        },
+        {
+          image: '../../assets/img/javascriptsmall-green.png',
+          text: 'JavaScript',
+        },
+        {
+          image: '../../assets/img/firebasesmall-green.png',
+          text: 'Firebase',
+        },
       ],
       links: [
         {
           github: 'https://github.com/SebastianRegending/join.git',
-          livetest: 'test'
+          livetest: 'test',
         },
-      ]
-  
-  },
-  
-  { 
-    position: '02',
-    name: 'Sharkie',
-    description: 'Schwimm- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den riesigen Orca zu kämpfen.',
-    screenshot: '../../assets/img/sharkie.png',
-    skills: [
-      {
-      image: '../../assets/img/htmlsmall-green.png',
-      text: 'HTML'
+      ],
     },
+
     {
-      image: '../../assets/img/csssmall-green.png',
-      text: 'CSS'
+      position: '02',
+      name: 'Sharkie',
+      description:
+        'Schwimm- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den riesigen Orca zu kämpfen.',
+      screenshot: '../../assets/img/sharkie.png',
+      skills: [
+        {
+          image: '../../assets/img/htmlsmall-green.png',
+          text: 'HTML',
+        },
+        {
+          image: '../../assets/img/csssmall-green.png',
+          text: 'CSS',
+        },
+        {
+          image: '../../assets/img/javascriptsmall-green.png',
+          text: 'JavaScript',
+        },
+        {
+          image: '',
+          text: 'OOP',
+        },
+      ],
+      links: [
+        {
+          github: 'https://github.com/SebastianRegending/sharkie.git',
+          livetest: 'test',
+        },
+      ],
     },
-    {
-      image: '../../assets/img/javascriptsmall-green.png',
-      text: 'JavaScript'
-    },
-    {
-      image: '',
-      text: 'OOP'
-    },
-    ],
-    links: [
-      {
-        github: 'https://github.com/SebastianRegending/sharkie.git',
-        livetest: 'test'
-      },
-    ]
-  }
   ];
 }
-

@@ -8,13 +8,13 @@ import { sharedImports } from '../imports';
   standalone: true,
   imports: [sharedImports, TranslateModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
   constructor(private languageService: LanguageService) {}
-  isGerman = true;
+  isGerman = false;
   isAnimating = false;
-  currentLanguageIcon = '../../assets/img/en-active.png';
+  currentLanguageIcon = '../../assets/img/de-active.png';
 
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
@@ -35,8 +35,6 @@ export class HeaderComponent {
   isActive = false;
 
   toggleClass() {
-    this.isActive = !this.isActive;    
+    this.isActive = !this.isActive;
   }
-
 }
-

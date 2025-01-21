@@ -7,12 +7,11 @@ import { LanguageService } from '../language.service';
   standalone: true,
   imports: [sharedImports],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-constructor(private languageService: LanguageService) {}
+  constructor(private languageService: LanguageService) {}
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
   }
-
 }

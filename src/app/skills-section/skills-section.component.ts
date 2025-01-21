@@ -56,6 +56,6 @@ export class SkillsSectionComponent {
     {
       image: '../../assets/img/scrum.png',
       title: 'SCRUM',
-    }
+    },
   ];
 }

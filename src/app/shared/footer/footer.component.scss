@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-content: flex-start;
-    .text-wrapper {
+    > .text-wrapper {
       width: fit-content;
       height: 50px;
       margin: 0;
@@ -38,6 +38,9 @@
         color: white;
         margin: 4px 0;
       }
+    }
+    .logo {
+      cursor: pointer;
     }
   }
   > .copyright {

@@ -7,12 +7,11 @@ import { LanguageService } from '../shared/language.service';
   standalone: true,
   imports: [sharedImports],
   templateUrl: './aboutme-section.component.html',
-  styleUrl: './aboutme-section.component.scss'
+  styleUrl: './aboutme-section.component.scss',
 })
 export class AboutmeSectionComponent {
   constructor(private languageService: LanguageService) {}
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
   }
-
 }

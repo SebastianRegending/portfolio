@@ -10,29 +10,25 @@ import { LanguageService } from '../shared/language.service';
   standalone: true,
   imports: [CommonModule, sharedImports],
   templateUrl: './project-dialog.component.html',
-  styleUrl: './project-dialog.component.scss'
+  styleUrl: './project-dialog.component.scss',
 })
 export class ProjectDialogComponent implements OnInit {
-
-constructor(private languageService: LanguageService) {}
+  constructor(private languageService: LanguageService) {}
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
   }
 
-ngOnInit(): void {
-}
-@Input() myProjects: any[] = [];
-@Input() currentIndex: number = 0;
-@Input() project: string | null = null;
-@Output() closeDialog = new EventEmitter<void>();
+  ngOnInit(): void {}
+  @Input() myProjects: any[] = [];
+  @Input() currentIndex: number = 0;
+  @Input() project: string | null = null;
+  @Output() closeDialog = new EventEmitter<void>();
 
-nextProject() {
-  this.currentIndex = (this.currentIndex + 1) % this.myProjects.length;
+  nextProject() {
+    this.currentIndex = (this.currentIndex + 1) % this.myProjects.length;
+  }
 
-}
-
-close() {
-  this.closeDialog.emit();
-}
-
+  close() {
+    this.closeDialog.emit();
+  }
 }

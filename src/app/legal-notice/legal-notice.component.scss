@@ -70,3 +70,26 @@
     }
   }
 }
+
+@media screen and (max-width: 864px) {
+  .legal-notice {
+    padding: 72px 48px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .legal-notice {
+    padding: 36px 24px;
+    > .legal-notice-content {
+      > h2 {
+        font-size: 48px;
+      }
+      > h3 {
+        font-size: 20px;
+      }
+      > p {
+        font-size: 16px;
+      }
+    }
+  }
+}

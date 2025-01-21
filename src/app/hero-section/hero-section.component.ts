@@ -7,12 +7,11 @@ import { LanguageService } from '../shared/language.service';
   standalone: true,
   imports: [sharedImports],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss'
+  styleUrl: './hero-section.component.scss',
 })
 export class HeroSectionComponent {
   constructor(private languageService: LanguageService) {}
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
   }
-
 }

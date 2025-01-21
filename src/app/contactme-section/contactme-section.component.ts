@@ -11,28 +11,27 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [FormsModule, CommonModule, sharedImports, RouterLink],
   templateUrl: './contactme-section.component.html',
-  styleUrl: './contactme-section.component.scss'
+  styleUrl: './contactme-section.component.scss',
 })
 export class ContactmeSectionComponent {
-
   constructor(private languageService: LanguageService) {}
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
   }
-  
+
   @ViewChild('contactForm') contactForm!: NgForm;
 
   http = inject(HttpClient);
 
-contactData = {
-  name: '',
-  email: '',
-  message: '',
-  acceptPrivacyPolicy: false,
-}
+  contactData = {
+    name: '',
+    email: '',
+    message: '',
+    acceptPrivacyPolicy: false,
+  };
 
-mailTest = true;
-showPrivacyPolicyNotice = false;
+  mailTest = true;
+  showPrivacyPolicyNotice = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -47,10 +46,10 @@ showPrivacyPolicyNotice = false;
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {
@@ -59,17 +58,17 @@ showPrivacyPolicyNotice = false;
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
     }
   }
 
   isFormValid(): boolean {
-    return (this.contactForm?.valid ?? false) && this.contactData.acceptPrivacyPolicy;
+    return (
+      (this.contactForm?.valid ?? false) && this.contactData.acceptPrivacyPolicy
+    );
   }
 
   onPrivacyPolicyChange(checked: boolean) {
     this.showPrivacyPolicyNotice = !checked;
   }
-
 }
