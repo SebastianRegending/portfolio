@@ -344,8 +344,19 @@
 }
 
 @media screen and (max-width: 430px) {
+  #contactme {
+    padding: 74px 24px;
+  }
   .content-wrapper {
     width: 100%;
+    > .lets-work {
+      > h3 {
+        font-size: 28px;
+      }
+      > h4 {
+        font-size: 20px;
+      }
+    }
     > .form-wrapper {
       width: 100%;
       height: fit-content;

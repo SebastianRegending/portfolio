@@ -84,7 +84,7 @@ export class ProjectsSectionComponent {
       links: [
         {
           github: 'https://github.com/SebastianRegending/join.git',
-          livetest: 'test',
+          livetest: 'https://sebastian-regending.de/join/login.html',
         },
       ],
     },
@@ -116,7 +116,7 @@ export class ProjectsSectionComponent {
       links: [
         {
           github: 'https://github.com/SebastianRegending/sharkie.git',
-          livetest: 'test',
+          livetest: 'https://sebastian-regending.de/sharkie/index.html',
         },
       ],
     },

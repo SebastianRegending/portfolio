@@ -30,22 +30,21 @@ export class ContactmeSectionComponent {
     acceptPrivacyPolicy: false,
   };
 
-  mailTest = true;
   showPrivacyPolicyNotice = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://sebastian-regending.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
+        'Content-Type': 'application/json',
         responseType: 'text',
       },
     },
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -57,7 +56,7 @@ export class ContactmeSectionComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid) {
       ngForm.resetForm();
     }
   }

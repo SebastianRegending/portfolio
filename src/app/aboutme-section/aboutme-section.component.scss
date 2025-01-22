@@ -205,6 +205,9 @@
 }
 
 @media screen and (max-width: 430px) {
+  #aboutme {
+    padding: 74px 24px 0;
+  }
   .content {
     > .profile-wrapper {
       width: 270px;
@@ -214,7 +217,7 @@
       > .aboutme-box {
         padding: 16px 20px;
         > h3 {
-          font-size: 48px;
+          font-size: 40px;
         }
       }
     }

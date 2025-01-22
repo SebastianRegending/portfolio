@@ -133,5 +133,20 @@
     > .copyright-mobile {
       font-size: 16px;
     }
+    > .footer-content {
+      height: fit-content;
+      align-items: flex-end;
+      > .content-left {
+        height: fit-content;
+        > .text-wrapper {
+          height: fit-content;
+        }
+      }
+      >.content-right {
+        >.link-wrapper {
+          justify-content: flex-end;
+        }
+      }
+    }
   }
 }
