@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ProjectDialogComponent } from '../project-dialog/project-dialog.component';
 import { CommonModule } from '@angular/common';
 import { sharedImports } from '../../app/shared/imports';
-import { LanguageService } from '../shared/language.service';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-projects-section',
@@ -60,8 +60,7 @@ export class ProjectsSectionComponent {
     {
       position: '01',
       name: 'Join',
-      description:
-        'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
+      description: 'join-project-description',
       screenshot: '../../assets/img/join-big.png',
       skills: [
         {
@@ -92,8 +91,7 @@ export class ProjectsSectionComponent {
     {
       position: '02',
       name: 'Sharkie',
-      description:
-        'Schwimm- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den riesigen Orca zu kämpfen.',
+      description: 'sharkie-project-description',
       screenshot: '../../assets/img/sharkie.png',
       skills: [
         {

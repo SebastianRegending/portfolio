@@ -1,13 +1,10 @@
 <header id="header">
     <nav class="navigation">
-        <div class="language-switcher" (click)="toggleLanguage()">
-            <img
-            class="language-switcher__icon"
-            [class.language-switcher__icon--animating]="isAnimating"
-            [src]="currentLanguageIcon"
-            [alt]="isGerman ? 'English' : 'Deutsch'"
-            />
-        </div>
+              <div class="button r" id="button-6" (click)="toggleLanguage()">
+                <input type="checkbox" class="checkbox" />
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
         <div class="link-wrapper">       
             <a class="link" href="#aboutme">{{ 'aboutme-header' | translate }}</a>
             <div class="green-point"></div>
@@ -21,7 +18,7 @@
         <div class="green-point"></div>
     </div>  
 </nav>
-<img class="logo" src="" alt="logo">
+<img class="logo" src="../../../assets/img/comingsoon.png" alt="logo">
     <button 
   class="menu d-none" 
   (click)="toggleMenu($event)" 
@@ -49,13 +46,10 @@
           <a class="link" href="#projects">{{ 'projects-header' | translate }}</a>
           <div class="green-point"></div>
       </div>  
-      <div class="language-switcher" (click)="useLanguage(isGerman ? 'de' : 'en')">
-          <img
-            class="language-switcher__icon"
-            [class.language-switcher__icon--animating]="isAnimating"
-            [src]="currentLanguageIcon"
-            [alt]="isGerman ? 'English' : 'Deutsch'"
-          />
-        </div>
+      <div class="button r" id="button-6-mobile" (click)="toggleLanguage()">
+                <input type="checkbox" class="checkbox" />
+                <div class="knobs"></div>
+                <div class="layer"></div>
+              </div>
 </nav>
 </div>

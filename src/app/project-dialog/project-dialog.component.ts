@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Input, Output, EventEmitter } from '@angular/core';
 import { sharedImports } from '../shared/imports';
-import { LanguageService } from '../shared/language.service';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-project-dialog',

@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { sharedImports } from '../imports';
-import { LanguageService } from '../language.service';
+import { LanguageService } from '../services/language.service';
+import { ScrollStateService } from '../services/scroll-state.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
@@ -10,8 +12,16 @@ import { LanguageService } from '../language.service';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  constructor(private languageService: LanguageService) {}
-  useLanguage(language: string): void {
-    this.languageService.useLanguage(language);
+  constructor(
+    private languageService: LanguageService,
+    private scrollStateService: ScrollStateService,
+    private viewportScroller: ViewportScroller,
+    private el: ElementRef
+  ) {}
+
+  onLegalNoticeClick(): void {
+    const footerPosition =
+      this.el.nativeElement.getBoundingClientRect().bottom + window.scrollY;
+    this.scrollStateService.setPreviousScrollPosition(footerPosition);
   }
 }

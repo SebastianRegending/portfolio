@@ -283,12 +283,78 @@
   pointer-events: none;
 }
 
+.submit-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .dialog-content {
+    background-color: #1c1c1c;
+    border: 1px solid #3dcfb680;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+
+    h3 {
+      color: $green;
+      margin-bottom: 16px;
+      font-family: "Fira Code";
+      font-weight: 700;
+      font-size: 24px;
+    }
+
+    p {
+      color: white;
+      margin-bottom: 24px;
+      font-family: "Karla";
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    button {
+      width: 174px;
+      height: 48px;
+      border: 1px solid white;
+      border-radius: 100px;
+      background-color: transparent;
+      color: white;
+      font-family: "Karla";
+      font-weight: 400;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: $green;
+        color: $green;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1370px) {
-  .lets-work {
-    width: 100%;
-    margin: 0 48px 0 0;
-    > h3 {
-      font-size: 48px;
+  .content-wrapper {
+    .lets-work {
+      width: 100%;
+      margin: 0 12px 0 0;
+      > h3 {
+        font-size: 48px;
+      }
+    }
+    > .form-wrapper {
+      width: 100%;
+      > .form {
+        width: 100%;
+      }
     }
   }
 }
@@ -302,9 +368,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 0 24px 0;
     > .lets-work {
       width: 550px;
-      margin: 0;
+      height: fit-content;
+      margin: 0 0 24px 0;
+    }
+    > .form-wrapper {
+      justify-content: center;
+      align-items: center;
+      > .form {
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
@@ -312,13 +388,16 @@
 @media screen and (max-width: 864px) {
   #contactme {
     height: fit-content;
-    padding: 74px 48px;
+    padding: 74px 48px 0;
   }
   .content-wrapper {
     width: 370px;
     > .lets-work {
       width: 100%;
       height: fit-content;
+      > h3 {
+        font-size: 40px;
+      }
     }
     .form-wrapper {
       width: 370px;
@@ -326,9 +405,15 @@
         width: 100%;
         > .form-element {
           width: 100%;
+          > label {
+            font-size: 20px;
+          }
         }
         > .last-form-element {
           width: 100%;
+          > label {
+            font-size: 20px;
+          }
         }
         > .checkbox-form {
           width: 100%;
@@ -337,6 +422,7 @@
           width: 100%;
           justify-content: center;
           align-items: center;
+          margin: 24px 0 0 0;
         }
       }
     }
@@ -345,7 +431,7 @@
 
 @media screen and (max-width: 430px) {
   #contactme {
-    padding: 74px 24px;
+    padding: 74px 24px 0;
   }
   .content-wrapper {
     width: 100%;

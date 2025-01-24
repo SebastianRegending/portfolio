@@ -36,5 +36,12 @@
 </div>
 </form>
 </div>
+<div class="submit-dialog" *ngIf="showSubmitDialog">
+    <div class="dialog-content">
+        <h3>{{ 'formsubmitdialog-title' | translate }}</h3>
+        <p>{{ 'formsubmitdialog-message' | translate }}</p>
+        <button (click)="closeDialog()">{{ 'ok-button' | translate }}</button>
+    </div>
+</div>
 </div>
 </section>

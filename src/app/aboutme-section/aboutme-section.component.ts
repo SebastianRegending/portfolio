@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { sharedImports } from '../shared/imports';
-import { LanguageService } from '../shared/language.service';
+import { LanguageService } from '../shared/services/language.service';
 
 @Component({
   selector: 'app-aboutme-section',

@@ -4,7 +4,7 @@
   display: none !important;
 }
 
-.footer {
+#footer {
   width: 100%;
   height: 160px;
   display: flex;
@@ -41,6 +41,7 @@
     }
     .logo {
       cursor: pointer;
+      filter: invert(1);
     }
   }
   > .copyright {
@@ -105,7 +106,7 @@
 }
 
 @media screen and (max-width: 864px) {
-  .footer {
+  #footer {
     height: fit-content;
     flex-direction: column;
     padding: 0 48px;
@@ -127,7 +128,7 @@
 }
 
 @media screen and (max-width: 430px) {
-  .footer {
+  #footer {
     height: fit-content;
     padding: 0 24px;
     > .copyright-mobile {
@@ -142,8 +143,8 @@
           height: fit-content;
         }
       }
-      >.content-right {
-        >.link-wrapper {
+      > .content-right {
+        > .link-wrapper {
           justify-content: flex-end;
         }
       }

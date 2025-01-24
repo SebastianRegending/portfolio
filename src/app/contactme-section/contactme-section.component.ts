@@ -1,9 +1,12 @@
 import { CommonModule } from '@angular/common';
+import { ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { sharedImports } from '../shared/imports';
-import { LanguageService } from '../shared/language.service';
+import { LanguageService } from '../shared/services/language.service';
+import { ScrollStateService } from '../shared/services/scroll-state.service';
+import { ViewportScroller } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -14,7 +17,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contactme-section.component.scss',
 })
 export class ContactmeSectionComponent {
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private scrollStateService: ScrollStateService,
+    private viewportScroller: ViewportScroller,
+    private el: ElementRef
+  ) {}
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
   }
@@ -31,6 +39,7 @@ export class ContactmeSectionComponent {
   };
 
   showPrivacyPolicyNotice = false;
+  showSubmitDialog = false;
 
   post = {
     endPoint: 'https://sebastian-regending.de/sendMail.php',
@@ -49,16 +58,21 @@ export class ContactmeSectionComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            this.showSubmitDialog = true;
             ngForm.resetForm();
+            this.contactData.acceptPrivacyPolicy = false;
+            this.showPrivacyPolicyNotice = false;
           },
           error: (error) => {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid) {
-      ngForm.resetForm();
     }
+  }
+
+  closeDialog() {
+    this.showSubmitDialog = false;
   }
 
   isFormValid(): boolean {
@@ -69,5 +83,11 @@ export class ContactmeSectionComponent {
 
   onPrivacyPolicyChange(checked: boolean) {
     this.showPrivacyPolicyNotice = !checked;
+  }
+
+  onPrivacyPolicyClick(): void {
+    const footerPosition =
+      this.el.nativeElement.getBoundingClientRect().bottom + window.scrollY;
+    this.scrollStateService.setPreviousScrollPosition(footerPosition);
   }
 }
