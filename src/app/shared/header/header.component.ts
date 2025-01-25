@@ -12,30 +12,20 @@ import { sharedImports } from '../imports';
 })
 export class HeaderComponent implements OnInit {
   constructor(private languageService: LanguageService) {}
-  isGerman = false;
+  currentLang: string = 'de';
+  isButtonChecked: boolean = false;
   isAnimating = false;
   isActive = false;
   isMenuOpened = false;
-  currentLanguageIcon = '../../assets/img/de-active.png';
 
   ngOnInit() {
-    const currentLang = this.languageService.getCurrentLanguage();
-    this.isGerman = currentLang === 'de';
-    this.currentLanguageIcon = this.isGerman
-      ? '../assets/img/de-active.png'
-      : '../assets/img/en-active.png';
+    this.currentLang = this.languageService.getCurrentLanguage();
+    this.isButtonChecked = this.currentLang === 'de';
   }
 
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
     this.isAnimating = true;
-
-    setTimeout(() => {
-      this.isGerman = !this.isGerman;
-      this.currentLanguageIcon = this.isGerman
-        ? '../assets/img/de-active.png'
-        : '../assets/img/en-active.png';
-    }, 200);
 
     setTimeout(() => {
       this.isAnimating = false;
@@ -51,8 +41,10 @@ export class HeaderComponent implements OnInit {
     this.toggleClass();
   }
 
-  toggleLanguage(): void {
-    const newLanguage = this.isGerman ? 'en' : 'de';
-    this.useLanguage(newLanguage);
+  toggleLanguage() {
+    const newLanguage = this.currentLang === 'en' ? 'de' : 'en';
+    this.languageService.useLanguage(newLanguage);
+    this.currentLang = newLanguage;
+    this.isButtonChecked = newLanguage === 'de';
   }
 }

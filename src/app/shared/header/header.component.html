@@ -1,7 +1,7 @@
 <header id="header">
     <nav class="navigation">
               <div class="button r" id="button-6" (click)="toggleLanguage()">
-                <input type="checkbox" class="checkbox" />
+                <input type="checkbox" class="checkbox" [checked]="isButtonChecked" />
                 <div class="knobs"></div>
                 <div class="layer"></div>
               </div>
@@ -47,7 +47,7 @@
           <div class="green-point"></div>
       </div>  
       <div class="button r" id="button-6-mobile" (click)="toggleLanguage()">
-                <input type="checkbox" class="checkbox" />
+                <input type="checkbox" class="checkbox" [checked]="isButtonChecked" />
                 <div class="knobs"></div>
                 <div class="layer"></div>
               </div>

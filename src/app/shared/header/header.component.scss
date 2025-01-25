@@ -63,7 +63,7 @@
   height: 28px;
   display: flex;
   align-items: center;
-  gap: 24px; 
+  gap: 24px;
   > button {
     width: 84px;
     height: 28px;
@@ -204,7 +204,7 @@
 
 .layer {
   width: 100%;
-  background-color: #1D302D;
+  background-color: #1d302d;
   transition: 0.3s ease all;
   z-index: 1;
   border: 1px solid $green;
@@ -215,14 +215,14 @@
 }
 
 #button-6 .knobs:before {
-  content: "DE";
+  content: "EN";
   position: absolute;
   top: 4px;
   left: 4px;
   width: 20px;
   height: 10px;
   color: #fff;
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-size: 12px;
   font-weight: 700;
   text-align: center;
@@ -244,13 +244,13 @@
 }
 
 #button-6 .checkbox:checked + .knobs:before {
-  content: "EN";
+  content: "DE";
   background-color: $green;
   transform: rotateZ(180deg);
 }
 
 #button-6 .checkbox:checked ~ .layer {
-  background-color: #1D302D;
+  background-color: #1d302d;
   transform: rotateZ(180deg);
 }
 
@@ -260,14 +260,14 @@
 }
 
 #button-6-mobile .knobs:before {
-  content: "DE";
+  content: "EN";
   position: absolute;
   top: 4px;
   left: 4px;
   width: 20px;
   height: 10px;
   color: #fff;
-  font-family: 'Fira Code';
+  font-family: "Fira Code";
   font-size: 12px;
   font-weight: 700;
   text-align: center;
@@ -289,13 +289,13 @@
 }
 
 #button-6-mobile .checkbox:checked + .knobs:before {
-  content: "EN";
+  content: "DE";
   background-color: $green;
   transform: rotateZ(180deg);
 }
 
 #button-6-mobile .checkbox:checked ~ .layer {
-  background-color: #1D302D;
+  background-color: #1d302d;
   transform: rotateZ(180deg);
 }
 

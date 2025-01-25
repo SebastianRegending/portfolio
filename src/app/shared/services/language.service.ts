@@ -41,8 +41,15 @@ export class LanguageService {
 
   getCurrentLanguage(): string {
     if (this.isBrowser) {
-      return localStorage.getItem(this.LANGUAGE_KEY) || 'en';
+      const storedLanguage = localStorage.getItem(this.LANGUAGE_KEY);
+      if (storedLanguage === 'de' || storedLanguage === 'en') {
+        return storedLanguage;
+      }
     }
     return 'en';
+  }
+
+  get LANGUAGE_KEY_PUBLIC(): string {
+    return this.LANGUAGE_KEY;
   }
 }
