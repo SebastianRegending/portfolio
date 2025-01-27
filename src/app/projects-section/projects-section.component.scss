@@ -13,7 +13,12 @@
   height: 600px;
   display: flex;
   background-color: #1c1c1c;
-  padding: 0 96px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 96px;
 }
 
 .portfolio {
@@ -184,6 +189,9 @@
 @media screen and (max-width: 1050px) {
   #projects {
     height: fit-content;
+  }
+  .content {
+    height: fit-content;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -214,7 +222,7 @@
 }
 
 @media screen and (max-width: 864px) {
-  #projects {
+  .content {
     padding: 74px 24px 0;
   }
   .screenshot-box-wrapper {

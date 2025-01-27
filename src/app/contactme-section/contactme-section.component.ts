@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, ViewChild } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { sharedImports } from '../shared/imports';
 import { LanguageService } from '../shared/services/language.service';
 import { ScrollStateService } from '../shared/services/scroll-state.service';
@@ -40,6 +40,7 @@ export class ContactmeSectionComponent {
 
   showPrivacyPolicyNotice = false;
   showSubmitDialog = false;
+  showEmailError = false;
 
   post = {
     endPoint: 'https://sebastian-regending.de/sendMail.php',
@@ -80,6 +81,10 @@ export class ContactmeSectionComponent {
       (this.contactForm?.valid ?? false) && this.contactData.acceptPrivacyPolicy
     );
   }
+
+  onEmailBlur(email: NgModel): void {
+    this.showEmailError = email.invalid && email.value;
+}
 
   onPrivacyPolicyChange(checked: boolean) {
     this.showPrivacyPolicyNotice = !checked;

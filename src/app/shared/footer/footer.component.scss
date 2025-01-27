@@ -10,8 +10,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 96px;
   background-color: #1c1c1c;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 96px;
 }
 
 .footer-content {
@@ -40,8 +46,13 @@
       }
     }
     .logo {
+      width: 135px;
+      height: 70px;
       cursor: pointer;
-      filter: invert(1);
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
   > .copyright {
@@ -108,6 +119,9 @@
 @media screen and (max-width: 864px) {
   #footer {
     height: fit-content;
+  }
+  .content {
+    height: fit-content;
     flex-direction: column;
     padding: 0 48px;
     > .footer-content {
@@ -128,7 +142,7 @@
 }
 
 @media screen and (max-width: 430px) {
-  #footer {
+  .content {
     height: fit-content;
     padding: 0 24px;
     > .copyright-mobile {

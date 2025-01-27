@@ -6,40 +6,46 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 72px 96px;
   overflow: hidden;
-  > .privacy-policy-content {
-    width: 100%;
-    height: 100%;
+  > .content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    > h2 {
-      font-family: "Fira Code";
-      font-weight: 700;
-      font-size: 64px;
-      color: $green;
-      letter-spacing: -3px;
-      margin: 0 0 32px 0;
-    }
-    > h3 {
-      font-family: "Karla";
-      font-weight: 500;
-      font-size: 24px;
-      color: $green;
-      margin: 0 0 24px 0;
-    }
-    > p {
+    align-items: center;
+    padding: 72px 96px;
+    overflow: hidden;
+    > .privacy-policy-content {
       width: 100%;
-      height: fit-content;
+      height: 100%;
       display: flex;
-      gap: 24px;
-      font-family: "Karla";
-      font-weight: 400;
-      font-size: 16px;
-      color: #ffffffcc;
-      margin: 0 0 24px 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      > h2 {
+        font-family: "Fira Code";
+        font-weight: 700;
+        font-size: 64px;
+        color: $green;
+        letter-spacing: -3px;
+        margin: 0 0 32px 0;
+      }
+      > h3 {
+        font-family: "Karla";
+        font-weight: 500;
+        font-size: 24px;
+        color: $green;
+        margin: 0 0 24px 0;
+      }
+      > p {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        gap: 24px;
+        font-family: "Karla";
+        font-weight: 400;
+        font-size: 16px;
+        color: #ffffffcc;
+        margin: 0 0 24px 0;
+      }
     }
   }
 
@@ -73,21 +79,25 @@
 
 @media screen and (max-width: 1050px) {
   .privacy-policy {
-    padding: 72px 48px;
+    > .content {
+      padding: 72px 48px;
+    }
   }
 }
 
 @media screen and (max-width: 864px) {
   .privacy-policy {
-    > .privacy-policy-content {
-      > h2 {
-        font-size: 32px;
-      }
-      > h3 {
-        font-size: 20px;
-      }
-      > p {
-        font-size: 16px;
+    > .content {
+      > .privacy-policy-content {
+        > h2 {
+          font-size: 32px;
+        }
+        > h3 {
+          font-size: 20px;
+        }
+        > p {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -95,10 +105,12 @@
 
 @media screen and (max-width: 430px) {
   .privacy-policy {
-    padding: 36px 24px;
-    > .privacy-policy-content {
-      > h2 {
-        font-size: 26px;
+    > .content {
+      padding: 36px 24px;
+      > .privacy-policy-content {
+        > h2 {
+          font-size: 26px;
+        }
       }
     }
   }

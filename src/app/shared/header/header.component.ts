@@ -47,4 +47,9 @@ export class HeaderComponent implements OnInit {
     this.currentLang = newLanguage;
     this.isButtonChecked = newLanguage === 'de';
   }
+
+  closeMenu() {
+    this.isActive = false;
+    this.isMenuOpened = false;
+  }
 }

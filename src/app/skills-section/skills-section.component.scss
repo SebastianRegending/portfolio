@@ -10,6 +10,12 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 0 96px;
 }
 
@@ -195,7 +201,10 @@
 @media screen and (max-width: 1370px) {
   #skills {
     height: fit-content;
-    padding: 48px;
+    .content {
+      height: fit-content;
+      padding: 48px;
+    }
   }
   .technologies-wrapper {
     > .technologies-box {
@@ -221,7 +230,7 @@
 }
 
 @media screen and (max-width: 864px) {
-  #skills {
+  .content {
     justify-content: center;
     align-items: center;
     padding: 74px 48px 0;

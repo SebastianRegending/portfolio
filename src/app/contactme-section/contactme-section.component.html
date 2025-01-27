@@ -1,4 +1,5 @@
 <section id="contactme">
+    <div class="content">
 <div class="content-wrapper">
 <div class="lets-work">
     <h2>{{ 'contactme-contactsection' | translate }}</h2>
@@ -16,7 +17,10 @@
 </div>
 <div class="form-element">
     <label for="email">{{ 'formmail-contactsection' | translate }}</label>
-    <input #email="ngModel" [(ngModel)]="contactData.email" type="text" name="email" [placeholder]="!email.valid && email.touched ? ('alertmailmissing-contactsection' | translate) : ('placeholdermail-contactsection' | translate)" [ngClass]="{'placeholder-color-red': !email.valid && email.touched}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+    <input #email="ngModel" [(ngModel)]="contactData.email" (keyup)="onEmailBlur(email)" (blur)="onEmailBlur(email)" type="text" name="email" [placeholder]="!email.valid && email.touched ? ('alertmailmissing-contactsection' | translate) : ('placeholdermail-contactsection' | translate)" [ngClass]="{'placeholder-color-red': !email.valid && email.touched}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+    <span class="error-message" *ngIf="showEmailError">
+        {{ 'invalid-email-contactsection' | translate }}
+    </span>
 </div>
 <div class="last-form-element">
     <label for="issue">{{ 'formconcern-contactsection' | translate }}</label>
@@ -42,6 +46,7 @@
         <p>{{ 'formsubmitdialog-message' | translate }}</p>
         <button (click)="closeDialog()">{{ 'ok-button' | translate }}</button>
     </div>
+</div>
 </div>
 </div>
 </section>

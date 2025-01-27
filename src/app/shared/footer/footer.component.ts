@@ -24,4 +24,8 @@ export class FooterComponent {
       this.el.nativeElement.getBoundingClientRect().bottom + window.scrollY;
     this.scrollStateService.setPreviousScrollPosition(footerPosition);
   }
+
+  scrollToHeader(): void {
+    this.viewportScroller.scrollToAnchor('header');
+  }
 }

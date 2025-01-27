@@ -1,4 +1,5 @@
 <header id="header">
+    <div class="content">
     <nav class="navigation">
               <div class="button r" id="button-6" (click)="toggleLanguage()">
                 <input type="checkbox" class="checkbox" [checked]="isButtonChecked" />
@@ -18,7 +19,7 @@
         <div class="green-point"></div>
     </div>  
 </nav>
-<img class="logo" src="../../../assets/img/comingsoon.png" alt="logo">
+<img class="logo" src="../../../assets/img/Logo.png" alt="logo">
     <button 
   class="menu d-none" 
   (click)="toggleMenu($event)" 
@@ -31,19 +32,20 @@
           <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
         </svg>
     </button>
+</div>
 </header>
 <div class="navigation-mobile-wrapper" [class.is-open]="isActive">
 <nav class="navigation-mobile">
     <div class="link-wrapper">       
-        <a class="link" href="#aboutme">{{ 'aboutme-header' | translate }}</a>
+        <a class="link" href="#aboutme" (click)="closeMenu()">{{ 'aboutme-header' | translate }}</a>
         <div class="green-point"></div>
       </div> 
       <div class="link-wrapper">
-          <a class="link" href="#skills">{{ 'skills-header'| translate }}</a>
+          <a class="link" href="#skills" (click)="closeMenu()">{{ 'skills-header'| translate }}</a>
           <div class="green-point"></div>
       </div>
       <div class="link-wrapper">      
-          <a class="link" href="#projects">{{ 'projects-header' | translate }}</a>
+          <a class="link" href="#projects" (click)="closeMenu()">{{ 'projects-header' | translate }}</a>
           <div class="green-point"></div>
       </div>  
       <div class="button r" id="button-6-mobile" (click)="toggleLanguage()">

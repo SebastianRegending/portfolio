@@ -1,78 +1,48 @@
 <section class="privacy-policy">
+  <div class="content">
   <div class="privacy-policy-content">
-    <a class="back" (click)="goBack()"><img src="../../assets/img/arrow_back-green.png" alt="arrow_back-green">Back</a>
-       <h2>Datenschutzrichtlinie</h2>
+    <a class="back" (click)="goBack()"
+      ><img
+        src="../../assets/img/arrow_back-green.png"
+        alt="arrow_back-green"
+      />{{ "back" | translate }}</a
+    >
+    <h2>{{ "privacypolicy-contactsection" | translate }}</h2>
 
-        <h3>1. Einleitung</h3>
-        <p>
-        Ich nehme den Schutz Ihrer persönlichen Daten sehr ernst. Ihre Privatsphäre ist mir wichtig, und ich behandle Ihre personenbezogenen Daten vertraulich und gemäß den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzrichtlinie.<br>
-        Diese Datenschutzrichtlinie informiert Sie darüber, welche Daten auf meiner Webseite erhoben werden, wie diese genutzt werden und welche Rechte Sie in Bezug auf Ihre Daten haben.
-        </p>
-        
-        <h3>2. Verantwortliche Stelle</h3>
-        <p>
-        Verantwortlich für die Datenverarbeitung auf dieser Webseite ist:<br><br>
-        Sebastian Regending<br>
-        Saint-Louis-Str. 13<br>
-        79206 Breisach am Rhein<br>
-        sebastian&#64;sebastian-regending.de<br>
-        </p>
-        
-        <h3>3. Erhobene Daten und deren Verarbeitung</h3>
-        
-        <h3>3.1 Zugriffsdaten</h3>
-        <p>
-        Beim Besuch meiner Webseite werden automatisch folgende Daten erhoben und in Server-Logfiles gespeichert:<br><br>
-        
-        IP-Adresse<br>
-        Datum und Uhrzeit der Anfrage<br>
-        Browsertyp und -version<br>
-        Betriebssystem<br>
-        Referrer-URL (zuvor besuchte Seite)<br>
-        Hostname des zugreifenden Rechners<br>
-        Diese Daten werden ausschließlich zur Sicherstellung eines störungsfreien Betriebs der Webseite und zur Verbesserung meines Angebots ausgewertet. Sie werden nicht mit anderen Datenquellen zusammengeführt.
-        </p>
-        
-        <h3>3.2 Kontaktformular und E-Mail-Kontakt</h3>
-        <p>
-        Wenn Sie mich über ein Kontaktformular oder per E-Mail kontaktieren, werden die von Ihnen angegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Die Daten werden nicht ohne Ihre ausdrückliche Zustimmung weitergegeben.
-        </p>
-        <h3>4. Cookies</h3>
-        <p>
-        Meine Webseite verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden. Sie können die Speicherung von Cookies in den Einstellungen Ihres Browsers deaktivieren. Bitte beachten Sie jedoch, dass die Funktionalität der Webseite dadurch eingeschränkt sein kann.
-        </p>
-        <h3>5. Rechtsgrundlagen der Verarbeitung</h3>
-        <p>
-        Die Verarbeitung Ihrer Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen) sowie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse, wie die Optimierung der Webseite).
-        </p>
-        <h3>6. Ihre Rechte</h3>
-        <p>
-        Sie haben folgende Rechte in Bezug auf Ihre personenbezogenen Daten:<br><br>
-        
-        Auskunft (Art. 15 DSGVO)<br>
-        Berichtigung (Art. 16 DSGVO)<br>
-        Löschung (Art. 17 DSGVO)<br>
-        Einschränkung der Verarbeitung (Art. 18 DSGVO)<br>
-        Datenübertragbarkeit (Art. 20 DSGVO)<br>
-        Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)<br>
-        Zur Ausübung Ihrer Rechte können Sie sich jederzeit an mich wenden.<br>
-        </p>
-        <h3>7. Speicherdauer</h3>
-        <p>
-        Ich speichere Ihre personenbezogenen Daten nur so lange, wie dies für den jeweiligen Zweck erforderlich ist oder gesetzliche Vorgaben es verlangen.
-        </p>
-        <h3>8. Änderungen dieser Datenschutzrichtlinie</h3>
-        <p>
-        Ich behalte mir das Recht vor, diese Datenschutzrichtlinie bei Bedarf anzupassen, um sie an aktuelle rechtliche Anforderungen oder Änderungen meines Angebots anzupassen. Die aktuelle Version der Datenschutzrichtlinie finden Sie immer auf meiner Webseite.
-        </p>
-        <h3>9. Kontakt</h3>
-        <p>
-        Bei Fragen zur Verarbeitung Ihrer personenbezogenen Daten oder zur Wahrnehmung Ihrer Rechte können Sie mich unter den oben angegebenen Kontaktdaten erreichen.
-        </p>
-        <h3>10. Verwendung von Google Fonts</h3>
-        <p>
-        Auf meiner Webseite verwende ich Schriftarten von Google Fonts. Diese Schriftarten werden lokal auf meinem Webserver gespeichert und direkt von dort geladen. Dadurch erfolgt keine Verbindung zu den Servern von Google.<br>
-        Es werden keine personenbezogenen Daten (wie Ihre IP-Adresse) an Google oder Dritte übermittelt, wenn Sie meine Webseite besuchen. Die Nutzung von Google Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung meiner Webseite. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.
-        </p>
+    <h3>{{ "introduction" | translate }}</h3>
+    <p>{{ "introductiontext" | translate }}</p>
+
+    <h3>{{ "responsibleentity" | translate }}</h3>
+    <p>{{ "responsibleentitydetails" | translate }}</p>
+
+    <h3>{{ "collecteddata" | translate }}</h3>
+
+    <h3>{{ "accessdata" | translate }}</h3>
+    <p>{{ "accessdatadetails" | translate }}</p>
+
+    <h3>{{ "contactform" | translate }}</h3>
+    <p>{{ "contactformdetails" | translate }}</p>
+
+    <h3>{{ "cookies" | translate }}</h3>
+    <p>{{ "cookiesdetails" | translate }}</p>
+
+    <h3>{{ "legalgroundsofprocessing" | translate }}</h3>
+    <p>{{ "legalgroundsdetails" | translate }}</p>
+
+    <h3>{{ "yourrights" | translate }}</h3>
+    <p>{{ "yourrightsdetails" | translate }}</p>
+
+    <h3>{{ "storageduration" | translate }}</h3>
+    <p>{{ "storagedurationdetails" | translate }}</p>
+
+    <h3>{{ "privacypolicychanges" | translate }}</h3>
+    <p>{{ "privacypolicychangesdetails" | translate }}</p>
+
+    <h3>{{ "contact" | translate }}</h3>
+    <p>{{ "contactdetails" | translate }}</p>
+
+    <h3>{{ "googlefonts" | translate }}</h3>
+    <p>{{ "googlefontsdetails" | translate }}</p>
   </div>
+</div>
 </section>
