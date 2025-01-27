@@ -28,6 +28,7 @@
   "iminterested-contactsection": "I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
   "introduction-aboutmesection": "Hi, I’m a german speaking Frontend Developer based in Breisach am Rhein. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
   "introduction-skillssection": "My journey has involved working on diverse projects, employing a range of frontend technologies and concepts. I am open to embracing new technologies and methodologies to Continously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+  "invalid-message-contactsection": "Please enter at least 10 characters.",
   "ive-contactsection": "I've read the ",
   "join-project-description": "Task manager inspired by the Kanban system. Create and organize tasks with drag & drop features, assign users and categories.",
   "legalnotice-footer": "Legal Notice",

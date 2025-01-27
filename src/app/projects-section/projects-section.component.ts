@@ -106,10 +106,6 @@ export class ProjectsSectionComponent {
           image: '../../assets/img/javascriptsmall-green.png',
           text: 'JavaScript',
         },
-        {
-          image: '',
-          text: 'OOP',
-        },
       ],
       links: [
         {

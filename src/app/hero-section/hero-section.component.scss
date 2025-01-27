@@ -409,8 +409,11 @@
 }
 
 @media screen and (max-width: 430px) {
+  .hero {
+    height: fit-content;
+  }
   .content {
-    height: 100vh;
+    height: fit-content;
     padding: 0 24px;
     > .hero-name {
       height: fit-content;

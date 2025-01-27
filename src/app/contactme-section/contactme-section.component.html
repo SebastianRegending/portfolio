@@ -24,7 +24,10 @@
 </div>
 <div class="last-form-element">
     <label for="issue">{{ 'formconcern-contactsection' | translate }}</label>
-    <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" minlength="10" name="issue" [placeholder]="!message.valid && message.touched ? ('altertmessage-contactsection' | translate) : ('placeholdermessage-contactsection' | translate)" [ngClass]="{'placeholder-color-red': !message.valid && message.touched}" required></textarea>
+    <textarea #message="ngModel" [(ngModel)]="contactData.message" (keyup)="onMessageBlur(message)" (blur)="onMessageBlur(message)" type="text" minlength="10" name="issue" [placeholder]="!message.valid && message.touched ? ('altertmessage-contactsection' | translate) : ('placeholdermessage-contactsection' | translate)" [ngClass]="{'placeholder-color-red': !message.valid && message.touched}" required></textarea>
+    <span class="error-message-inputmessage" *ngIf="showMessageError">
+        {{ 'invalid-message-contactsection' | translate }}
+    </span>
 </div>
 <div class="checkbox-form">
 <div class="checkbox-wrapper">

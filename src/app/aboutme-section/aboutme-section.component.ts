@@ -14,4 +14,18 @@ export class AboutmeSectionComponent {
   useLanguage(language: string): void {
     this.languageService.useLanguage(language);
   }
+
+  isVisible: boolean = false;
+  hideSlantedLines: boolean = true;
+
+  showSlantedLinesBehindProfile() {
+    this.hideSlantedLines = false;
+  }
+
+  hideSlantedLinesBehindProfile() {
+    this.hideSlantedLines = true;
+  }
+
+
+
 }

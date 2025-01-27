@@ -2,8 +2,8 @@
     <div class="content">
     <div class="content-wrapper">
     <div class="profile-wrapper">
-        <img class="slantedlines" src="../../assets/img/slantedlines.png" alt="slantedlines">
-        <img class="profile" src="../../assets/img/profile.jpg" alt="profile">
+        <img class="slantedlines" src="../../assets/img/slantedlines.png" alt="slantedlines" [ngClass]="{'fade-out': hideSlantedLines}">
+        <img class="profile" src="../../assets/img/profile.jpg" alt="profile" (mouseover)="showSlantedLinesBehindProfile()" (mouseout)="hideSlantedLinesBehindProfile()">
 </div>
     <div class="aboutme-wrapper">
         <h2>{{ 'WhoIAm-aboutmesection' | translate }}</h2>

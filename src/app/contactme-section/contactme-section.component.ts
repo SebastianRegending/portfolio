@@ -41,6 +41,7 @@ export class ContactmeSectionComponent {
   showPrivacyPolicyNotice = false;
   showSubmitDialog = false;
   showEmailError = false;
+  showMessageError = false;
 
   post = {
     endPoint: 'https://sebastian-regending.de/sendMail.php',
@@ -84,7 +85,11 @@ export class ContactmeSectionComponent {
 
   onEmailBlur(email: NgModel): void {
     this.showEmailError = email.invalid && email.value;
-}
+  }
+
+  onMessageBlur(message: NgModel): void {
+    this.showMessageError = message.invalid && message.value;
+  }
 
   onPrivacyPolicyChange(checked: boolean) {
     this.showPrivacyPolicyNotice = !checked;
