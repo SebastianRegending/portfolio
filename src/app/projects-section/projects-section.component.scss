@@ -133,6 +133,11 @@
   flex-direction: column;
   align-items: flex-end;
   padding: 56px 0 0 0;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  &.fade-out {
+    opacity: 0;
+  }
 }
 
 .slantedlines-small-join {
@@ -159,6 +164,11 @@
   flex-direction: column;
   align-items: flex-end;
   padding: 24px 0 0 0;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  &.fade-out {
+    opacity: 0;
+  }
 }
 
 .slantedlines-small-sharkie {

@@ -22,11 +22,11 @@
     </div>
     <app-project-dialog *ngIf="isVisible" (closeDialog)="closeProjectDialog()" [currentIndex]="currentIndex" [myProjects]="myProjects"></app-project-dialog>
     <div class="screenshot-box-wrapper">
-    <div class="screenshot-box-join" [class.hidden]="hideJoinScreenshot">
+    <div class="screenshot-box-join" [ngClass]="{'fade-out': hideJoinScreenshot}">
         <img class="slantedlines-small-join" src="../../assets/img/slantedlines_small.png" alt="slantedlines_small">
         <img class="project-screenshot-join" src="../../assets/img/join.png" alt="join">
     </div>
-    <div class="screenshot-box-sharkie" [class.hidden]="hideSharkieScreenshot">
+    <div class="screenshot-box-sharkie" [ngClass]="{'fade-out': hideSharkieScreenshot}">
         <img class="project-screenshot-sharkie" src="../../assets/img/sharkie.png" alt="sharkie">
         <img class="slantedlines-small-sharkie" src="../../assets/img/slantedlines_small.png" alt="slantedlines_small">
     </div>
