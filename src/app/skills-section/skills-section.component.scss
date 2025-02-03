@@ -133,6 +133,7 @@
   height: 550px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 72px;
   padding: 52px 0 0 48px;
   > .single-skill {
