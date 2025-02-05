@@ -6,11 +6,10 @@ import { sharedImports } from '../shared/imports';
 import { LanguageService } from '../shared/services/language.service';
 
 @Component({
-  selector: 'app-project-dialog',
-  standalone: true,
-  imports: [CommonModule, sharedImports],
-  templateUrl: './project-dialog.component.html',
-  styleUrl: './project-dialog.component.scss',
+    selector: 'app-project-dialog',
+    imports: [CommonModule, sharedImports],
+    templateUrl: './project-dialog.component.html',
+    styleUrl: './project-dialog.component.scss'
 })
 export class ProjectDialogComponent implements OnInit {
   constructor(private languageService: LanguageService) {}

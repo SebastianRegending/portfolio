@@ -5,11 +5,10 @@ import { ScrollStateService } from '../services/scroll-state.service';
 import { ViewportScroller } from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [sharedImports],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+    selector: 'app-footer',
+    imports: [sharedImports],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
   constructor(

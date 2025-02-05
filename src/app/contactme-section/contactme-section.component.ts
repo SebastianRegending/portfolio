@@ -10,11 +10,10 @@ import { ViewportScroller } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-contactme-section',
-  standalone: true,
-  imports: [FormsModule, CommonModule, sharedImports, RouterLink],
-  templateUrl: './contactme-section.component.html',
-  styleUrl: './contactme-section.component.scss',
+    selector: 'app-contactme-section',
+    imports: [FormsModule, CommonModule, sharedImports, RouterLink],
+    templateUrl: './contactme-section.component.html',
+    styleUrl: './contactme-section.component.scss'
 })
 export class ContactmeSectionComponent {
   constructor(

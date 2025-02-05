@@ -4,11 +4,10 @@ import { LanguageService } from '../shared/services/language.service';
 import { title } from 'node:process';
 
 @Component({
-  selector: 'app-skills-section',
-  standalone: true,
-  imports: [sharedImports],
-  templateUrl: './skills-section.component.html',
-  styleUrl: './skills-section.component.scss',
+    selector: 'app-skills-section',
+    imports: [sharedImports],
+    templateUrl: './skills-section.component.html',
+    styleUrl: './skills-section.component.scss'
 })
 export class SkillsSectionComponent {
   constructor(private languageService: LanguageService) {}

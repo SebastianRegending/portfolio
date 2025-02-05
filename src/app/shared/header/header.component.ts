@@ -4,11 +4,10 @@ import { LanguageService } from '../services/language.service';
 import { sharedImports } from '../imports';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [sharedImports, TranslateModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
+    selector: 'app-header',
+    imports: [sharedImports, TranslateModule],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
   constructor(private languageService: LanguageService) {}

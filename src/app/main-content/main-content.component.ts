@@ -6,16 +6,15 @@ import { ProjectsSectionComponent } from '../projects-section/projects-section.c
 import { ContactmeSectionComponent } from '../contactme-section/contactme-section.component';
 
 @Component({
-  selector: 'app-main-content',
-  standalone: true,
-  imports: [
-    HeroSectionComponent,
-    AboutmeSectionComponent,
-    SkillsSectionComponent,
-    ProjectsSectionComponent,
-    ContactmeSectionComponent,
-  ],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+    selector: 'app-main-content',
+    imports: [
+        HeroSectionComponent,
+        AboutmeSectionComponent,
+        SkillsSectionComponent,
+        ProjectsSectionComponent,
+        ContactmeSectionComponent,
+    ],
+    templateUrl: './main-content.component.html',
+    styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {}

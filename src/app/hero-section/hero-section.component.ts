@@ -3,11 +3,10 @@ import { sharedImports } from '../../app/shared/imports';
 import { LanguageService } from '../shared/services/language.service';
 
 @Component({
-  selector: 'app-hero-section',
-  standalone: true,
-  imports: [sharedImports],
-  templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss',
+    selector: 'app-hero-section',
+    imports: [sharedImports],
+    templateUrl: './hero-section.component.html',
+    styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
   constructor(private languageService: LanguageService) {}

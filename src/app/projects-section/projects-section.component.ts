@@ -5,11 +5,10 @@ import { sharedImports } from '../../app/shared/imports';
 import { LanguageService } from '../shared/services/language.service';
 
 @Component({
-  selector: 'app-projects-section',
-  standalone: true,
-  imports: [ProjectDialogComponent, CommonModule, sharedImports],
-  templateUrl: './projects-section.component.html',
-  styleUrl: './projects-section.component.scss',
+    selector: 'app-projects-section',
+    imports: [ProjectDialogComponent, CommonModule, sharedImports],
+    templateUrl: './projects-section.component.html',
+    styleUrl: './projects-section.component.scss'
 })
 export class ProjectsSectionComponent {
   constructor(private languageService: LanguageService) {}

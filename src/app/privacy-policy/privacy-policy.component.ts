@@ -5,11 +5,10 @@ import { LanguageService } from '../shared/services/language.service';
 import { sharedImports } from '../../app/shared/imports';
 
 @Component({
-  selector: 'app-privacy-policy',
-  standalone: true,
-  imports: [sharedImports],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss',
+    selector: 'app-privacy-policy',
+    imports: [sharedImports],
+    templateUrl: './privacy-policy.component.html',
+    styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
   constructor(

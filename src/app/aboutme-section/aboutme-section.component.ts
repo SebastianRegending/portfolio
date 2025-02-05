@@ -3,11 +3,10 @@ import { sharedImports } from '../shared/imports';
 import { LanguageService } from '../shared/services/language.service';
 
 @Component({
-  selector: 'app-aboutme-section',
-  standalone: true,
-  imports: [sharedImports],
-  templateUrl: './aboutme-section.component.html',
-  styleUrl: './aboutme-section.component.scss',
+    selector: 'app-aboutme-section',
+    imports: [sharedImports],
+    templateUrl: './aboutme-section.component.html',
+    styleUrl: './aboutme-section.component.scss'
 })
 export class AboutmeSectionComponent {
   constructor(private languageService: LanguageService) {}

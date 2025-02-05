@@ -8,11 +8,10 @@ import { LanguageService } from '../shared/services/language.service';
 import { sharedImports } from '../../app/shared/imports';
 
 @Component({
-  selector: 'app-legal-notice',
-  standalone: true,
-  imports: [sharedImports],
-  templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss',
+    selector: 'app-legal-notice',
+    imports: [sharedImports],
+    templateUrl: './legal-notice.component.html',
+    styleUrl: './legal-notice.component.scss'
 })
 export class LegalNoticeComponent implements OnInit {
   constructor(
